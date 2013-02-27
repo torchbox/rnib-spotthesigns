@@ -460,6 +460,12 @@ body {
   line-height: 1.5em;
   color: #333;
 }
+.large {
+  font-size: 1.3em;
+}
+.largest {
+  font-size: 1.5em;
+}
 h1,
 h2,
 h3,
@@ -662,7 +668,7 @@ a.button:hover,
   clear: both;
 }
 .site-header .brand h1 {
-  text-indent: 100%;
+  text-indent: 1000%;
   white-space: nowrap;
   overflow: hidden;
   background: transparent url('../img/rniblogo.png') center center no-repeat;
@@ -786,6 +792,51 @@ a.button:hover,
   width: 50%;
   line-height: 1.8em;
 }
+.download-pack h2 {
+  font-size: 1em;
+  line-height: 1em;
+}
+.download-pack p {
+  font-size: .875em;
+  line-height: 1.4em;
+}
+.download-pack .button {
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+  background: #d93f02 url(../img/dl-icon.png) 90% 50% no-repeat;
+  -webkit-background-size: 60px 60px;
+  -moz-background-size: 60px 60px;
+  -o-background-size: 60px 60px;
+  background-size: 60px 60px;
+}
+.download-pack .button span {
+  display: block;
+  margin-right: 40%;
+}
+.download-pack .button .alpha {
+  font-size: 1.3125em;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.33em;
+}
+.download-pack .button .beta {
+  color: #fff;
+  font-size: 0.75em;
+  font-style: italic;
+  line-height: 1.3em;
+}
+.download-pack .button:hover,
+.download-pack .button:focus,
+.download-pack .button:active {
+  background-color: #333333;
+}
+.download-pack .button:hover span,
+.download-pack .button:focus span,
+.download-pack .button:active span {
+  color: #fff;
+  text-decoration: none;
+}
 /* Introduction */
 .introduction {
   padding: 1em 0;
@@ -794,7 +845,7 @@ a.button:hover,
 .introduction p {
   color: #666666;
 }
-.introduction p {
+.introduction .title p {
   font-size: 1.125em;
 }
 /*
@@ -809,7 +860,26 @@ a.button:hover,
  Newsletter
 */
 .newsletter {
+  background: #d3dddc;
+  padding: 2em 0;
   margin-bottom: 2em;
+}
+.newsletter h2 {
+  color: #2b6874;
+}
+.newsletter .newsletter-form {
+  padding: 5%;
+  background: #2b6874;
+  color: #fff;
+}
+.newsletter .newsletter-form h2 {
+  color: #fff;
+}
+.newsletter .newsletter-form p {
+  font-size: 0.875em;
+}
+.newsletter .about-content p {
+  font-size: 0.875em;
 }
 .newsletter ul {
   list-style: none outside none;
@@ -829,8 +899,10 @@ a.button:hover,
 }
 .newsletter input[type="email"],
 .newsletter input[type="text"] {
-  border: 1px solid #cccccc;
-  padding: 0.33em;
+  border: none;
+  padding: 2%;
+  width: 96%;
+  max-width: 100%;
 }
 .newsletter legend {
   position: absolute;
@@ -848,12 +920,27 @@ a.button:hover,
 .symptoms {
   margin-bottom: 2em;
 }
+.symptoms h2,
+.symptoms h3 {
+  color: #d93f02;
+}
 .symptoms .message {
   width: 100%;
   text-align: center;
 }
 .symptoms-breakdown {
   width: 100%;
+  clear: both;
+  zoom: 1;
+}
+.symptoms-breakdown:before,
+.symptoms-breakdown:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
+}
+.symptoms-breakdown:after {
   clear: both;
 }
 .symptoms-breakdown img {
@@ -896,10 +983,55 @@ a.button:hover,
   margin-bottom: 2em;
 }
 /* Multimedia section */
+.multimedia {
+  margin-bottom: 2em;
+}
+.multimedia h2,
+.multimedia h3 {
+  color: #aa0066;
+}
 .multimedia .embed {
   margin: 0 auto;
   max-width: 300px;
   width: 100%;
+}
+/* About section */
+.about-RNIB {
+  margin-bottom: 2em;
+}
+/* Download app */
+.download-app {
+  background-color: #2b6874;
+  color: #fff;
+  padding: 1em 0;
+}
+.download-app h2 {
+  color: #fff;
+}
+.download-app a {
+  color: #fff;
+}
+.download-app .app-badge a {
+  height: 2.222222222em;
+  width: 7.5em;
+  text-indent: 1000%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url('../img/app-store.png');
+  -webkit-background-size: 7.5em 2.222222222em;
+  -moz-background-size: 7.5em 2.222222222em;
+  -o-background-size: 7.5em 2.222222222em;
+  background-size: 7.5em 2.222222222em;
+  background-color: #2b6874;
+  background-repeat: no-repeat;
+  display: block;
+}
+.svg {
+  /* Using Modernizer to check for svg support */
+
+}
+.svg .app-badge a {
+  background-image: url('../img/app-store.svg');
 }
 .hide {
   display: none;

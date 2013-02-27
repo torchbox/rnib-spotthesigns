@@ -1,6 +1,36 @@
-.site-header {
-
-    .brand {
-         h1 {
-             background-image url('../img/rniblogo@2.png');
-        }
+/*
+ * $Mixins
+ */
+/*--- $Clearfix ---*/
+/*--- $Lighten ---*/
+/*--- $Transition ---*/
+/*--- $Horziontal List ---*/
+/*--- $Unstyled list ---*/
+.unstyled-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+/*--- $buttons ---*/
+/*--- $Shadows ---*/
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/*---  Layouts ---*/
+.site-header .brand h1 {
+  background-image: url('../img/rniblogo@2.png');
+  -webkit-background-size: 280px 53px;
+  -moz-background-size: 280px 53px;
+  -o-background-size: 280px 53px;
+  background-size: 280px 53px;
+}
+.download-pack .button {
+  background-image: url('../img/dl-icon@2.png');
+}

@@ -3,7 +3,7 @@
  * $Mixins
  */
 .imagereplacement() {
-    text-indent: 100%;
+    text-indent: 1000%;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -111,6 +111,13 @@
 	-moz-background-clip:    padding; 
 	-webkit-background-clip: padding-box; 
 	background-clip:         padding-box; 
+}
+
+.background-size (@vertical, @horizontal) {
+	-webkit-background-size: @vertical @horizontal;
+	   -moz-background-size: @vertical @horizontal;
+	     -o-background-size: @vertical @horizontal;
+	        background-size: @vertical @horizontal;
 }
 
 
