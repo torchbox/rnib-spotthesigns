@@ -60,6 +60,9 @@ body {
 .symptoms-breakdown .unit:last-child {
   margin-right: 0;
 }
+.symptoms .message {
+  text-align: center;
+}
 .site-footer {
   font-size: .777777778em;
   /*14px*/

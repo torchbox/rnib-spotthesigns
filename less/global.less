@@ -303,7 +303,7 @@ a.button,
 	margin-bottom: 2em;
 	h2 {
 		color: @rnibdarkgreen;
-	}
+			}
 	.button {
 		background: @black;
 		&:hover {
@@ -317,6 +317,8 @@ a.button,
 		margin-bottom: 1em;
 		h2 {
 			color: #fff;
+			border-bottom: 1px solid @rnibgreen;
+			padding-bottom: 0.5em;
 		}
 		p {
 			font-size: 0.875em;
@@ -367,7 +369,7 @@ a.button,
 	}
 	.message {
 		width: 100%;
-		text-align: center;
+
 	}
 }
 .symptoms-breakdown {
@@ -430,8 +432,21 @@ a.button,
 		width: 100%;
 	}
 	.sharing {
+		h2 {
+			color: @red;
+		}
 		ul {
 			.unstyled-list();
+		}
+		
+		a {
+			display: inline-block;
+			background: @red;
+			color: #fff;
+			padding: 0.33em 0.5em;
+			width: 14em;
+			margin-bottom: 0.5em;
+			text-decoration: none;
 		}
 	}
 }

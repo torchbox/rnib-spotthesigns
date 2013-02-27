@@ -881,6 +881,8 @@ a.button:hover,
 }
 .newsletter .newsletter-form h2 {
   color: #fff;
+  border-bottom: 1px solid #008193;
+  padding-bottom: 0.5em;
 }
 .newsletter .newsletter-form p {
   font-size: 0.875em;
@@ -948,7 +950,6 @@ a.button:hover,
 }
 .symptoms .message {
   width: 100%;
-  text-align: center;
 }
 .symptoms-breakdown {
   width: 100%;
@@ -1017,10 +1018,22 @@ a.button:hover,
   max-width: 300px;
   width: 100%;
 }
+.multimedia .sharing h2 {
+  color: #d93f02;
+}
 .multimedia .sharing ul {
   list-style: none outside none;
   margin: 0;
   padding: 0;
+}
+.multimedia .sharing a {
+  display: inline-block;
+  background: #d93f02;
+  color: #fff;
+  padding: 0.33em 0.5em;
+  width: 14em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
 }
 /* About section */
 .about-RNIB {
