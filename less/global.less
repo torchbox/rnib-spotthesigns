@@ -15,7 +15,7 @@
 @red: #D93F02;
 @lightgrey: #e9e9e9;
 @midgrey: #ccc;
-@grey: #666;
+@grey: #555;
 
 body {
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -304,10 +304,17 @@ a.button,
 	h2 {
 		color: @rnibdarkgreen;
 	}
+	.button {
+		background: @black;
+		&:hover {
+			background: @red;
+		}
+	}
 	.newsletter-form {
 		padding: 5%;
 		background: @rnibdarkgreen;
 		color: #fff;
+		margin-bottom: 1em;
 		h2 {
 			color: #fff;
 		}
@@ -342,6 +349,7 @@ a.button,
     padding: 2%;
     width: 96%;
     max-width: 100%;
+    .border-radiuses(3px,3px,3px,3px);
   }
   
   legend {
@@ -420,6 +428,11 @@ a.button,
 		margin: 0 auto;
 		max-width: 300px;
 		width: 100%;
+	}
+	.sharing {
+		ul {
+			.unstyled-list();
+		}
 	}
 }
 
