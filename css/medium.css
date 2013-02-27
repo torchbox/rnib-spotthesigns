@@ -62,6 +62,8 @@ body {
 }
 .symptoms .message {
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 .site-footer {
   font-size: .777777778em;
@@ -110,7 +112,7 @@ body {
   padding: 1em 0;
   margin: 0;
 }
-.multimedia .share {
+.multimedia .sharing {
   width: 25%;
   float: right;
 }

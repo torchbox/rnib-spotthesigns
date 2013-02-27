@@ -830,12 +830,17 @@ a.button:hover,
 .download-pack .button:focus,
 .download-pack .button:active {
   background-color: #333333;
+  text-decoration: none;
+}
+.download-pack .button:hover .alpha,
+.download-pack .button:focus .alpha,
+.download-pack .button:active .alpha {
+  text-decoration: underline;
 }
 .download-pack .button:hover span,
 .download-pack .button:focus span,
 .download-pack .button:active span {
   color: #fff;
-  text-decoration: none;
 }
 /* Introduction */
 .introduction {
@@ -881,7 +886,7 @@ a.button:hover,
 }
 .newsletter .newsletter-form h2 {
   color: #fff;
-  border-bottom: 1px solid #008193;
+  border-bottom: 1px solid #398999;
   padding-bottom: 0.5em;
 }
 .newsletter .newsletter-form p {
@@ -949,7 +954,23 @@ a.button:hover,
   color: #d93f02;
 }
 .symptoms .message {
-  width: 100%;
+  background: #e9e9e9;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0.5em;
 }
 .symptoms-breakdown {
   width: 100%;
@@ -1031,7 +1052,7 @@ a.button:hover,
   background: #d93f02;
   color: #fff;
   padding: 0.33em 0.5em;
-  width: 14em;
+  width: 80%;
   margin-bottom: 0.5em;
   text-decoration: none;
 }

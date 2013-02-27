@@ -261,9 +261,13 @@ a.button,
 		&:focus,
 		&:active {
 			background-color: @black;
+			text-decoration: none;
+			.alpha {
+					text-decoration: underline;
+			}
 			span {
 				color: #fff;
-				text-decoration: none;
+			
 			}
 		}
 	}
@@ -303,7 +307,7 @@ a.button,
 	margin-bottom: 2em;
 	h2 {
 		color: @rnibdarkgreen;
-			}
+	}
 	.button {
 		background: @black;
 		&:hover {
@@ -317,7 +321,7 @@ a.button,
 		margin-bottom: 1em;
 		h2 {
 			color: #fff;
-			border-bottom: 1px solid @rnibgreen;
+			border-bottom: 1px solid lighten(@rnibdarkgreen, 10%);
 			padding-bottom: 0.5em;
 		}
 		p {
@@ -368,8 +372,9 @@ a.button,
 		color: @red;
 	}
 	.message {
-		width: 100%;
-
+		background: @lightgrey;
+		.border-radiuses(3px,3px,3px,3px);
+		padding: 0.5em;
 	}
 }
 .symptoms-breakdown {
@@ -444,7 +449,7 @@ a.button,
 			background: @red;
 			color: #fff;
 			padding: 0.33em 0.5em;
-			width: 14em;
+			width: 80%;
 			margin-bottom: 0.5em;
 			text-decoration: none;
 		}
