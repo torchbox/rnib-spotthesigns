@@ -1,0 +1,44 @@
+/*
+ * $Mixins
+ */
+/*--- $Clearfix ---*/
+/*--- $Lighten ---*/
+/*--- $Transition ---*/
+/*--- $Horziontal List ---*/
+/*--- $Unstyled list ---*/
+.unstyled-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+/*--- $buttons ---*/
+/*--- $Shadows ---*/
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/*---  Layouts ---*/
+body {
+  font-size: 18px;
+}
+.page-content {
+  width: 71%;
+  float: left;
+}
+.navigation {
+  width: 25%;
+  float: right;
+  margin-left: 4%;
+}
+/*
+ Symptoms
+ */
+.symptoms-breakdown p {
+  line-height: 1.5em;
+}

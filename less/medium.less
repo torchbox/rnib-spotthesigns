@@ -1,0 +1,57 @@
+@import "mixins.less";
+
+body {
+    line-height: 1.6em;
+}
+
+.page-content,
+.navigation {
+    margin: 0 auto;
+}
+
+.secondary-nav {
+    width: 50%;
+    float: right;
+    ul {
+        float: right;
+    }
+}
+
+.site-header {
+  margin-bottom: 1em;
+}
+
+.title {
+  width: 60%;
+  float: left;
+}
+
+.download-pack {
+  width: 33%;
+  float: right;
+}
+
+/*
+ Symptoms
+ */
+.symptoms-breakdown {
+   .three-columns();
+}
+
+.site-footer {
+    font-size: .777777778em; /*14px*/
+    .contact-info {
+        .hoz-list();
+        li {
+            float: none;
+            width: auto;
+        }
+    }
+}
+
+
+.multimedia {
+	.embed {
+		max-width: 600px;
+	}
+}

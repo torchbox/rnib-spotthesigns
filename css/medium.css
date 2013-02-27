@@ -1,0 +1,100 @@
+/*
+ * $Mixins
+ */
+/*--- $Clearfix ---*/
+/*--- $Lighten ---*/
+/*--- $Transition ---*/
+/*--- $Horziontal List ---*/
+/*--- $Unstyled list ---*/
+.unstyled-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+/*--- $buttons ---*/
+/*--- $Shadows ---*/
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/*---  Layouts ---*/
+body {
+  line-height: 1.6em;
+}
+.page-content,
+.navigation {
+  margin: 0 auto;
+}
+.secondary-nav {
+  width: 50%;
+  float: right;
+}
+.secondary-nav ul {
+  float: right;
+}
+.site-header {
+  margin-bottom: 1em;
+}
+.title {
+  width: 60%;
+  float: left;
+}
+.download-pack {
+  width: 33%;
+  float: right;
+}
+/*
+ Symptoms
+ */
+.symptoms-breakdown .unit {
+  width: 32%;
+  float: left;
+  margin-right: 2%;
+}
+.symptoms-breakdown .unit:last-child {
+  margin-right: 0;
+}
+.site-footer {
+  font-size: .777777778em;
+  /*14px*/
+
+}
+.site-footer .contact-info {
+  zoom: 1;
+  margin-left: 0px;
+  list-style: none;
+}
+.site-footer .contact-info:before,
+.site-footer .contact-info:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
+}
+.site-footer .contact-info:after {
+  clear: both;
+}
+.site-footer .contact-info li {
+  display: inline-block;
+  /* IE7 fix */
+
+  zoom: 1;
+  *display: inline;
+  margin-right: 1em;
+}
+.site-footer .contact-info li:last-child {
+  margin-right: 0px;
+}
+.site-footer .contact-info li {
+  float: none;
+  width: auto;
+}
+.multimedia .embed {
+  max-width: 600px;
+}

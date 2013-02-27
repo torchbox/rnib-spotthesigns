@@ -1,0 +1,149 @@
+
+/*
+ * $Mixins
+ */
+.imagereplacement() {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.hide() {
+  display: none;
+  visibility: hidden;
+}
+
+/*--- $Clearfix ---*/
+
+.clearfix() {
+  zoom: 1;
+  &:before, &:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    *display: inline;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+
+/*--- $Lighten ---*/
+.lighten (@percent: 100%) {
+  filter: brightness(@percent);
+  -webkit-filter: brightness(@percent);
+  -moz-filter: brightness(@percent);
+  -o-filter: brightness(@percent);
+  -ms-filter: brightness(@percent);
+}
+
+/*--- $Transition ---*/
+
+.transition(@transition: 0.2s background-color) {
+  -moz-transition: @transition;
+  -webkit-transition: @transition;
+  transition: @transition;
+}
+
+/*--- $Horziontal List ---*/
+.hoz-list(@margin-right:1em) {
+  .clearfix;
+  margin-left: 0px;
+  list-style: none;
+  li {
+    display: inline-block;
+    /* IE7 fix */
+    zoom: 1;
+    *display: inline;
+    margin-right: @margin-right;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+/*--- $Unstyled list ---*/
+.unstyled-list {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+
+/*--- $buttons ---*/
+.button() {
+    background: @rnibgreen;
+    color: #fff;
+    padding: 0.5em 1em;
+    display: inline-block;
+    .border-radiuses(3px, 3px, 3px, 3px);
+    text-decoration: none;
+    .transition();
+    -webkit-appearance: none;
+    border: none;
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: @red;
+        .box-shadow(0 1px 1px 1px rgba(0,0,0,0.2));
+        .transition();
+        outline: none;
+        text-decoration: underline;
+    }
+}   
+
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-right-radius:    @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius:  @bottomleft;
+	-webkit-border-top-left-radius:     @topleft;
+
+	-moz-border-radius-topright:        @topright;
+	-moz-border-radius-bottomright:     @bottomright;
+	-moz-border-radius-bottomleft:      @bottomleft;
+	-moz-border-radius-topleft:         @topleft;
+
+	border-top-right-radius:            @topright;
+	border-bottom-right-radius:         @bottomright;
+	border-bottom-left-radius:          @bottomleft;
+	border-top-left-radius:             @topleft;
+
+	-moz-background-clip:    padding; 
+	-webkit-background-clip: padding-box; 
+	background-clip:         padding-box; 
+}
+
+
+/*--- $Shadows ---*/
+
+.text-shadow (@shadow) {
+  -webkit-text-shadow: @shadow;
+  -moz-text-shadow: @shadow; 
+  text-shadow: @shadow;
+}   
+
+.box-shadow (@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow; 
+}
+
+.visuallyhidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+/*---  Layouts ---*/
+.three-columns() {
+  .unit {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+  }
+  .unit:last-child {
+	  margin-right: 0;
+  }
+}
