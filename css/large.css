@@ -36,6 +36,10 @@ body {
   float: right;
   margin-left: 4%;
 }
+.download-pack {
+  margin-top: 9em;
+  margin-bottom: 0;
+}
 /*
  Symptoms
  */
