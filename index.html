@@ -137,7 +137,13 @@
         // Can also be used with $(document).ready()
         $(window).load(function() {
           $('.flexslider').flexslider({
-            animation: "slide"
+            animation: "slide",
+            prevText: "Previous slide",          
+            nextText: "Next slide",
+            keyboard: false,
+            pausePlay: true,
+            pauseText: 'Pause slideshow',
+            playText: 'Play slideshow'
           });
         });
      </script>
@@ -192,9 +198,9 @@
        
         <a href="#" class="button">
         	<span class="alpha">Download the fact sheet</span>
-	       <span class="beta"></span>
+	       <span class="beta">.pdf file</span>
         </a>
-        <p>1.34<abbr title="Megabytes" lang="en">Mb</abbr> / 30 seconds on dialup / .pdf file</p>
+  
       </div>
       </div>
     </section>
@@ -247,16 +253,16 @@
           <div class="flexslider">
           <ul class="slides">
             <li>
-              <img src="img/slide1.jpg" />
+              <img src="img/slide1.jpg" alt="" />
             </li>
             <li>
-              <img src="img/slide2.jpg" />
+              <img src="img/slide2.jpg" alt="" />
             </li>
             <li>
-              <img src="img/slide1.jpg" />
+              <img src="img/slide1.jpg" alt="" />
             </li>
             <li>
-              <img src="img/slide2.jpg" />
+              <img src="img/slide2.jpg" alt="" />
             </li>
           </ul>
         </div>
@@ -353,6 +359,8 @@
     	</div>
     </section>
     
+   
+    
     <section class="download-app">
     	<div class="container">
     		<div class="app-content">
@@ -366,7 +374,14 @@
     		</div>
     	</div>
     </section>
-    
+     <section class="what-next">
+      <div class="container">
+        <h2><span>Save your sight</span> spot the signs</h2>
+        <p>AMD isn't the only condition that can affect your sight, eye health is important. Something, something do this stuff, read about <a href="#">eye health</a> on our website</p>
+        <p><a href="#" class="download-again">Download the fact sheet</a></p>
+   
+      </div>
+    </section>
     
     </article>
     

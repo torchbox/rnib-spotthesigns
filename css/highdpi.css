@@ -46,11 +46,17 @@
   background-image: url('../img/dl-icon@2.png');
 }
 .symptoms .message {
-  background-image: url(../img/info-icon@2.png);
+  background-image: url('../img/info-icon@2.png');
 }
 .multimedia .transcript {
-  background-image: url(../img/transcript@2.png);
+  background-image: url('../img/transcript@2.png');
 }
 .multimedia .radio {
-  background-image: url(../img/radio@2.png);
+  background-image: url('../img/radio@2.png');
+}
+.what-next .download-again {
+  background-image: url('../img/download-again@2.png');
+}
+.flex-direction-nav a {
+  background-image: url('../img/slides-nav@2.png');
 }

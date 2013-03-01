@@ -66,16 +66,16 @@ body {
 .title h1 {
   font-size: 3.5em;
 }
-.download-pack {
+.introduction .download-pack {
   width: 33%;
   float: right;
   margin-top: 9em;
   margin-bottom: 0;
 }
-.download-pack .button {
+.introduction .download-pack .button {
   float: right;
 }
-.download-pack p {
+.introduction .download-pack p {
   float: right;
 }
 /*
@@ -138,10 +138,6 @@ body {
   padding: 2em 0;
   background: url(../img/flare.png) left 7em no-repeat;
 }
-.multimedia .embed object {
-  margin: 0 auto;
-  display: block;
-}
 /* 
  about section
  */
@@ -167,4 +163,8 @@ body {
 }
 .app-badge a {
   margin: 2em auto 0;
+}
+.download-app,
+.what-next {
+  padding: 2em 0;
 }
