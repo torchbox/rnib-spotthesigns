@@ -23,6 +23,17 @@
   padding: 0;
   border: 0;
 }
+.icon-link {
+  background-color: transparent;
+  padding-left: 1.8em;
+  display: inline-block;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  -o-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
 /*---  Layouts ---*/
 .site-header .brand h1 {
   background-image: url('../img/rniblogo@2.png');
@@ -33,4 +44,13 @@
 }
 .download-pack .button {
   background-image: url('../img/dl-icon@2.png');
+}
+.symptoms .message {
+  background-image: url(../img/info-icon@2.png);
+}
+.multimedia .transcript {
+  background-image: url(../img/transcript@2.png);
+}
+.multimedia .radio {
+  background-image: url(../img/radio@2.png);
 }

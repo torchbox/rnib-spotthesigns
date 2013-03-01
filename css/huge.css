@@ -23,4 +23,15 @@
   padding: 0;
   border: 0;
 }
+.icon-link {
+  background-color: transparent;
+  padding-left: 1.8em;
+  display: inline-block;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  -o-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
 /*---  Layouts ---*/

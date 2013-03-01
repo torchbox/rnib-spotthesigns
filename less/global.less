@@ -33,6 +33,7 @@ body {
 
 h1, h2, h3, h4 {
     color: @rnibgreen;
+    text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -45,7 +46,6 @@ h2 {
     font-size: 1.75em; /* 29px */
       margin-bottom: 0.571428571em; /* 16px */
     line-height: 1.2em;
-    font-weight: normal;
 }
 
 h3 {
@@ -278,7 +278,7 @@ a.button,
 /* Introduction */
 .introduction {
   .container {
-    padding: 2em 0;
+    padding: 1em 0;
   }
   span,
   p {
@@ -297,13 +297,48 @@ a.button,
 
 
 /*
- Newsletter
+ Symptoms
+ */
+.symptoms {
+	padding: 1em 0 2em;
+	border-top: 1px solid @lightgrey;
+	h2 + p {
+  	max-width: 600px;
+	}
+	h3 {
+  	margin-bottom: 0.5em;
+	}
+	h2, h3 {
+		color: @red;
+	}
+	.message {
+		background: lighten(@lightgrey, 3%) url(../img/info-icon.png) 0.5em center no-repeat;
+		.background-size(24px, 24px);
+		.border-radiuses(3px,3px,3px,3px);
+		padding: 0.5em 0.5em 0.5em 2.5em;
+		max-width: 100%;
+	}
+}
+.symptoms-breakdown {
+	width: 100%;
+	clear: both;
+	.clearfix();
+	img {
+		width:	100%;
+	}
+	p {
+	  line-height: 1.3em;
+	}
+}
+
+/*
+about section
 */
 
-.newsletter {
+.about-rnib {
 	background: @rniblightgreen;
-	padding: 4em 0;
-	margin-bottom: 2em;
+	padding: 1.5em 0;
+	margin-bottom: 1em;
 	h2 {
 		color: @rnibdarkgreen;
 		margin-bottom: 1em;
@@ -337,13 +372,16 @@ a.button,
   ul {
     .unstyled-list();
   }
+  
   li {
     margin-bottom: 1em;
   }
+  
   fieldset {
     border: none;
     padding: 0;
   }
+  
   .instruct {
     font-size: 0.75em;
     color: @grey;
@@ -363,84 +401,41 @@ a.button,
   }
 }
 
-/*
- Symptoms
- */
-.symptoms {
-	padding: 4em 0 6em;
-	border-top: 1px solid @lightgrey;
-	h2 + p {
-  	max-width: 600px;
-	}
-	h2, h3 {
-		color: @red;
-	}
-	.message {
-		background: lighten(@lightgrey, 3%);
-		.border-radiuses(3px,3px,3px,3px);
-		padding: 0.5em;
-		max-width: 100%;
-	}
-}
-.symptoms-breakdown {
-	width: 100%;
-	clear: both;
-	.clearfix();
-	img {
-		width:	100%;
-	}
-	p {
-	  line-height: 1.3em;
-	}
-}
 
-/* Styles for content pages */
-.page-content,
-.navigation {
-    max-width: 36.666666667em; /* Max comfortable reading width at 18px*/
-}
 
-.standfirst {
-    font-size: 1.125em;
-    border-bottom: 1px solid @lightgrey;
-    margin-bottom: 1em;
-}
 
-.navigation {
-    h2 {
-       color: @black;
-       font-size: .875em;
-
-    }
-    a {
-        color: @grey;
-        text-decoration: none;
-        display: block;
-        padding: 0.25em 0;
-        line-height: 1.2em;
-        &:hover {
-            text-decoration: underline;
-            color: @red;
-        }
-    }
-
-    ul {
-        .unstyled-list();
-        margin-bottom: 2em;
-    }
-}
 
 /* Multimedia section */
 .multimedia {
-  padding: 2em 0;
+  padding: 1em 0;
 	h2, h3 {
-		color: @pink;
+		color: @red;
 	}
-	margin-bottom: 2em;
+	.transcript {
+  	.icon-link();
+  	background-image: url(../img/transcript.png);
+  	margin-right: 2em;
+	}
+	
+	.radio {
+    .icon-link();
+  	background-image: url(../img/radio.png);
+
+	}
+	
 	.embed {
 		margin: 0 auto;
-		max-width: 300px;
-		width: 100%;
+		width: 95%;
+		/*background: @lightgrey;*/
+		border-top: 1px solid @lightgrey;
+		border-bottom: 1px solid @lightgrey;
+		padding: 2.5%;
+		/*.border-radiuses(6px,6px,6px,6px);*/
+		object {
+  		.box-shadow(0 0 5px 1px rgba(0,0,0,0.1));
+  		border: 0.5em solid rgba(255,255,255,1);
+
+		}
 	}
 	.sharing {
 		h2 {
@@ -462,11 +457,7 @@ a.button,
 	}
 }
 
-/* About section */
-.about-RNIB {
-	margin-bottom: 2em;
-	}
- 
+
 /* Download app */
 .download-app {
 	background-color: @rnibdarkgreen;
@@ -587,6 +578,41 @@ html[xmlns] .slides {display: block;}
   .flex-direction-nav .flex-next {opacity: 1; right: 0;}
 }
 
+/* Styles for content pages */
+.page-content,
+.navigation {
+    max-width: 36.666666667em; /* Max comfortable reading width at 18px*/
+}
+
+.standfirst {
+    font-size: 1.125em;
+    border-bottom: 1px solid @lightgrey;
+    margin-bottom: 1em;
+}
+
+.navigation {
+    h2 {
+       color: @black;
+       font-size: .875em;
+
+    }
+    a {
+        color: @grey;
+        text-decoration: none;
+        display: block;
+        padding: 0.25em 0;
+        line-height: 1.2em;
+        &:hover {
+            text-decoration: underline;
+            color: @red;
+        }
+    }
+
+    ul {
+        .unstyled-list();
+        margin-bottom: 2em;
+    }
+}
 
 
 
