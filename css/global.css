@@ -616,6 +616,9 @@ a.button:hover,
 .access .text-resizer {
   float: right;
 }
+.access .skip-links {
+  float: left;
+}
 .access .text-resizer ul {
   list-style: none outside none;
   margin: 0;
@@ -634,7 +637,8 @@ a.button:hover,
 .access .text-resizer ul:after {
   clear: both;
 }
-.access .text-resizer ul li {
+.access .text-resizer ul li,
+.access .skip-links {
   display: inline-block;
   /* IE7 fix */
 
@@ -679,11 +683,11 @@ a.button:hover,
 .site-header:after {
   clear: both;
 }
-.site-header .brand h1 {
+.site-header .brand {
   text-indent: 1000%;
   white-space: nowrap;
   overflow: hidden;
-  background: transparent url('../img/rniblogo.png') center center no-repeat;
+  background: transparent url('../img/rniblogo.png') left center no-repeat;
 }
 .site-header .brand h1,
 .site-header .brand a {

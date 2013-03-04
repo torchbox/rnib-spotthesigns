@@ -27,139 +27,23 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/vendor/swfobject.js"> </script>
 	<script type="text/javascript" src="js/vendor/jquery.flexslider-min.js"> </script>
-	
-	 <script src="js/vendor/enquire.js"></script>
-     <script>
-		enquire.register("screen and (min-width:850px)", {
-		
-		    match : function() {
-			    (function(){
-
-				var a = {};
-			
-					a.videoid = 'Xitg5oyemxQ';
-			
-					a.width = '800';
-			
-					a.height = '467';
-			
-					a.duration = '6:26';
-			
-					a.HTMLid = 'video-embed';
-			
-					a.path = 'swf/flashcontrols.swf';
-			
-					var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
-			
-					var params = {allowFullScreen: 'true'};
-			
-					swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
-			
-				})();
-   
-		    },      // REQUIRED
-		                                // Triggered when the media query transitions 
-		                                // *from an unmatched state to a matched state*
-		
-		    unmatch : function() {
-			    
-			    (function(){
-
-				var a = {};
-			
-					a.videoid = 'Xitg5oyemxQ';
-			
-					a.width = '300';
-			
-					a.height = '200';
-			
-					a.duration = '6:26';
-			
-					a.HTMLid = 'video-embed';
-			
-					a.path = 'swf/flashcontrols.swf';
-			
-					var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
-			
-					var params = {allowFullScreen: 'true'};
-			
-					swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
-			
-				})();
-
-
-			    
-		    },    // OPTIONAL
-		                                // If supplied, triggered when the media query transitions 
-		                                // *from a matched state to an unmatched state*.
-		
-		    setup : function() {
-			    
-			    (function(){
-
-				var a = {};
-			
-					a.videoid = 'Xitg5oyemxQ';
-			
-					a.width = '300';
-			
-					a.height = '200';
-			
-					a.duration = '6:26';
-			
-					a.HTMLid = 'video-embed';
-			
-					a.path = 'swf/flashcontrols.swf';
-			
-					var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
-			
-					var params = {allowFullScreen: 'true'};
-			
-					swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
-			
-				})();
-		    },      // OPTIONAL
-		                                // If supplied, a one-time setup function 
-		                                // triggered when the handler is first registered.                           
-		
-		    deferSetup : false,          // OPTIONAL, defaults to false
-		                                // If set to true, defers execution the setup function until
-		                                // the media query is first matched. Setup is still triggered just once.
-		
-		    destroy : function() {}     //OPTIONAL
-		                                // If supplied, triggered when a hander is unregistered (covered later). 
-		                                // Enables you to provide lifecycle to responsive widgets. 
-		                                // Put cleanup logic here.
-		
-		}, true).listen();
-     </script>
-     <script>
-        // Can also be used with $(document).ready()
-        $(window).load(function() {
-          $('.flexslider').flexslider({
-            animation: "slide",
-            prevText: "Previous slide",          
-            nextText: "Next slide",
-            keyboard: false,
-            pausePlay: true,
-            pauseText: 'Pause slideshow',
-            playText: 'Play slideshow'
-          });
-        });
-     </script>
-	
+	<script src="js/vendor/enquire.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
     <header role="banner" class="site-header">
         <div class="access">
             <div class="container">
+                <div class="skip-links">
+                  <a href="#main-content">Skip to main content</a>
+                </div>
                 <div class="text-resizer">
                     <p>Change text size</p>
                     <ul>
-                    	<li><a href="#" class="resize-normal">A</a></li>
-                    	<li><a href="#" class="resize-plus-one">A</a></li>
-                    	<li><a href="#" class="resize-plus-two">A</a></li>
+                    	<li><a href="#" class="resize-normal">Small text</a></li>
+                    	<li><a href="#" class="resize-plus-one">Medium text</a></li>
+                    	<li><a href="#" class="resize-plus-two">Large text</a></li>
                     </ul>
                 </div>
             </div>
@@ -174,12 +58,9 @@
                 </ul>
             </nav>
             <div class="brand">
-                <h1>
-                    <a href="#">
-                        <abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr>
-                    </a>
-                </h1>
-               
+              <a href="#">
+                  <abbr title="Royal National Institute of Blind People" lang="en">RNIB Home</abbr>
+              </a> 
             </div>
             
         </div>
@@ -205,7 +86,7 @@
       </div>
     </section>
     
-    <section class="symptoms">
+    <section id="main-content" class="symptoms">
       <div class="container">
         <h2>The signs and symptoms of AMD</h2>
         <p>Symptoms vary, but usually the first problems people notice are with their ability to see detail. You may experience some or all of the following</p>
