@@ -31,7 +31,10 @@
 .player-container {
     background-color: #fff;
     font: 13px Helvetica, Arial, sans-serif;
-    color: #000; }
+    color: #000; 
+    max-width: 600px;
+    margin: 0 auto;
+}
     
 .player-container span, .player-container object {font-size: 90%; }
     
