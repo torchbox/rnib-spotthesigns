@@ -1094,6 +1094,7 @@ about section
   width: 95%;
   min-height: 200px;
   margin: 0 auto;
+  display: block;
 }
 
 .multimedia .sharing h2 {
