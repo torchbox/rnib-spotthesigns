@@ -1093,6 +1093,7 @@ about section
 #main-youtube {
   width: 95%;
   min-height: 200px;
+  margin: 0 auto;
 }
 
 .multimedia .sharing h2 {
