@@ -27,7 +27,7 @@ $(function() {
 
   // Store the mobile replacement video
   var standardYouTubeMarkup = '<iframe id="main-youtube" class="youtube" width="300" height="169" src="http://www.youtube.com/embed/hRO-53fGEFQ?rel=0" frameborder="0" allowfullscreen></iframe>';
- 
+  var accessbileMarkup = '<a href="http://www.youtube.com/watch?v=hRO-53fGEFQ">RNIB Bus video</a>';
   enquire.register("screen and (min-width:850px)", {
 
     match : function() {
@@ -36,24 +36,31 @@ $(function() {
         //Removes the mobile youtube player.
         $('.embed').children('#main-youtube').remove();
         //Adds the previously removed mark up and ID required by the video
-        $('.embed').append('<div id="video-embed"></div>');      
+        $('.embed').append(accessbileMarkup);      
 
-      console.log("Match is happening.");
-        var a = {};
-  
-        // Properties of a. 
-        a.videoid = 'Xitg5oyemxQ';
-        a.width = '800';
-        a.height = '467';
-        a.duration = '6:26';
-        a.HTMLid = 'video-embed';
-        a.path = 'swf/flashcontrols.swf';
-  
-        var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
-  
-        var params = {allowFullScreen: 'false'};
-  
-        swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
+        $(document).ready(function(){
+          // Find all links to videos on youtube
+          var $yt_links = $("a[href*='http://www.youtube.com/watch']");
+          // Create players for our youtube links
+          $.each($yt_links, function(i) {
+              var $holder = $('<span />');
+              $(this).parent().replaceWith($holder);
+              // Find the captions file if it exists
+              var $mycaptions = $(this).siblings('.captions');
+              // Work out if we have captions or not
+              var captionsf = $($mycaptions).length > 0 ? $($mycaptions).attr('href') : null;
+              // Ensure that we extract the last part of the youtube link (the video id)
+              // and pass it to the player() method
+              var link = $(this).attr('href').split("=")[1];
+              // Initialise the player
+              $holder.player({
+                id: 'yt',
+                useHtml5 : true,
+                media: 'hRO-53fGEFQ',
+                logoURL : 'http://rnib.local/',
+              });
+          });
+        });
       
     })();
 
