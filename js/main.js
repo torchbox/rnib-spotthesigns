@@ -16,7 +16,15 @@ $(function() {
     }
   });
 
-
+  $('.flexslider').flexslider({
+    animation: "slide",
+    prevText: "Previous slide",          
+    nextText: "Next slide",
+    keyboard: false,
+    pausePlay: true,
+    pauseText: 'Pause slideshow',
+    playText: 'Play slideshow'
+  });
 
 
   /**
@@ -108,14 +116,4 @@ $(function() {
       }
 
   }).listen();
-
-  $('.flexslider').flexslider({
-    animation: "slide",
-    prevText: "Previous slide",          
-    nextText: "Next slide",
-    keyboard: false,
-    pausePlay: true,
-    pauseText: 'Pause slideshow',
-    playText: 'Play slideshow'
-  });
 });

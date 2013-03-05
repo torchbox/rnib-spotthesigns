@@ -689,6 +689,12 @@ a.button:hover,
   overflow: hidden;
   background: transparent url('../img/rniblogo.png') left center no-repeat;
 }
+
+.site-header .brand a:focus {
+  text-indent: 0;
+  background: transparent;
+}
+
 .site-header .brand h1,
 .site-header .brand a {
   display: block;
@@ -959,6 +965,7 @@ about section
 }
 .about-rnib .button {
   background: #333333;
+  border: 1px solid #333333;
 }
 .about-rnib .button:hover {
   background: #d93f02;
@@ -998,7 +1005,7 @@ about section
 }
 .about-rnib input[type="email"],
 .about-rnib input[type="text"] {
-  border: none;
+  border: 1px solid #2b6874;
   padding: 2%;
   width: 96%;
   max-width: 100%;
@@ -1126,6 +1133,11 @@ about section
   background-repeat: no-repeat;
   display: block;
 }
+.download-app .app-badge a:focus {
+  text-indent: 0;
+  background: transparent;
+}
+
 .svg {
   /* Using Modernizer to check for svg support */
 
@@ -1307,7 +1319,7 @@ html[xmlns] .slides {
   height: 30px;
   margin: -20px 0 0;
   display: block;
-  background: url(../img/slides-nav.png) no-repeat 0 0;
+  background: url(../img/slides-nav.png) no-repeat 0 0 #d3dddc;
   -webkit-background-size: 57px 24px;
   -moz-background-size: 57px 24px;
   -o-background-size: 57px 24px;
@@ -1318,6 +1330,11 @@ html[xmlns] .slides {
   cursor: pointer;
   text-indent: -9999px;
 }
+
+.flex-direction-nav a:focus {
+  text-indent: 0px;
+}
+
 .flex-pauseplay {
   position: absolute;
   overflow: hidden;
