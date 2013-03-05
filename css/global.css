@@ -687,7 +687,7 @@ a.button:hover,
   text-indent: 1000%;
   white-space: nowrap;
   overflow: hidden;
-  background: transparent url('../img/rniblogo.png') left center no-repeat;
+  background: url('../img/rniblogo.png') left center no-repeat;
 }
 
 .site-header .brand a:focus {
