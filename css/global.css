@@ -1089,6 +1089,12 @@ about section
   display: block;
   margin: 0 auto;
 }
+
+#main-youtube {
+  width: 95%;
+  min-height: 200px;
+}
+
 .multimedia .sharing h2 {
   color: #d93f02;
 }
