@@ -613,12 +613,7 @@ a.button:hover,
 .access a {
   color: #fff;
 }
-.access .text-resizer {
-  float: right;
-}
-.access .skip-links {
-  float: left;
-}
+
 .access .text-resizer ul {
   list-style: none outside none;
   margin: 0;
