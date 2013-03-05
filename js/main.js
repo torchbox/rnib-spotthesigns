@@ -1,5 +1,6 @@
 $(function() {
     
+  // This is the text resizer that for accessibility. 
   $(".text-resizer a").click(function() {
     //Cache the DOM on this selector
     var rSize = $(this);
@@ -16,6 +17,7 @@ $(function() {
     }
   });
 
+  // Options for the flexslider
   $('.flexslider').flexslider({
     animation: "slide",
     prevText: "Previous slide",          
@@ -26,6 +28,27 @@ $(function() {
     playText: 'Play slideshow'
   });
 
+  /**
+  * Sign up form JavaScript validation
+  * http://docs.jquery.com/Plugins/Validation
+  */
+
+// validate signup form on keyup and submit
+  $("#sign-up-form").validate({
+    rules: {
+      Field5: "required",
+      Field6: "required",
+      Field3: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      Field5: "Please enter your first name",
+      Field6: "Please enter your last name",
+      Field3: "Please enter a valid email address"
+    }
+  });  
 
   /**
   * Enquire code for media query manipulation of the DOM
