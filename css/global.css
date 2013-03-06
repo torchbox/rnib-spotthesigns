@@ -1197,6 +1197,7 @@ form label.error {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -1213,7 +1214,8 @@ form label.error {
   -moz-background-size: 24px 24px;
   -o-background-size: 24px 24px;
   background-size: 24px 24px;
-  background-position: left center;
+  */
+  background-position: 10px center;
   background-repeat: no-repeat;
   background-color: #d93f02;
   background-position-x: .5em;

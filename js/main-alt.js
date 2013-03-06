@@ -50,7 +50,7 @@ $(function() {
     playText: 'Play slideshow'
   });
 
-  if ($("html.lt-ie9")) {
+  if ($("html").hasClass("lt-ie9")) {
     $('.embed').append(accessbileMarkup);
     $(document).ready(function(){
       // Find all links to videos on youtube

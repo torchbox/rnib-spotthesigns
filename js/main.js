@@ -50,7 +50,7 @@ $(function() {
     }
   });  
 
-  if ($("html.lt-ie9")) {
+  if ($("html").hasClass("lt-ie9")) {
         var a = {};
   
         // Properties of a. 
