@@ -25,18 +25,21 @@
       <link rel="stylesheet" href="css/large.css" type="text/css" media="all" />
   <![endif]-->
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/vendor/jquery.validate.min.js"> </script>
-  <script type="text/javascript" src="js/vendor/modernizer.min.js"></script>  
-  <script type="text/javascript" src="js/vendor/jquery.flexslider-min.js"> </script>
-  <script src="js/vendor/enquire.js"></script>
-  <script src="js/main-alt.js"></script>
-
   <script type="text/javascript" src="http://www.google.com/jsapi"></script>
   <script type="text/javascript">
       google.load("jquery", "1.6.0");
       google.load("jqueryui", "1.8.13");
   </script>
+
+  <script type="text/javascript" src="js/vendor/modernizer.min.js"></script>  
+  <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+  <script type="text/javascript" src="js/vendor/jquery.validate.min.js"> </script>
+  <script type="text/javascript" src="js/vendor/swfobject.js"> </script>
+  <script type="text/javascript" src="js/vendor/jquery.flexslider-min.js"> </script>
+  <script src="js/vendor/enquire.js"></script>
+  <script src="js/main-alt.js"></script>
+
+
  
   <script type="text/javascript" src="core/javascript/swfobject/swfobject.js"></script>
   <!-- Include the accessible media player script -->
@@ -55,9 +58,9 @@
                 <div class="text-resizer">
                     <p>Change text size</p>
                     <ul>
-                      <li><a href="#" class="resize-normal">Small text</a></li>
-                      <li><a href="#" class="resize-plus-one">Medium text</a></li>
-                      <li><a href="#" class="resize-plus-two">Large text</a></li>
+                      <li><a href="#" class="resize-normal" alt="Small text">A</a></li>
+                      <li><a href="#" class="resize-plus-one" alt="Medium text">A</a></li>
+                      <li><a href="#" class="resize-plus-two" alt="Large text">A</a></li>
                     </ul>
                 </div>
             </div>
@@ -73,7 +76,7 @@
             </nav>
             <div class="brand">
               <a href="#">
-                  <abbr title="Royal National Institute of Blind People" lang="en">RNIB Home</abbr>
+                  <abbr title="Royal National Institute of Blind People" lang="en"><img src="img/RNIBLogo.png" alt="RNIB Home" /></abbr>
               </a> 
             </div>
             
@@ -169,28 +172,28 @@
           <ul>
               
               <li id="foli5" class="notranslate      ">
-      <label class="desc" id="title5" for="Field5">
+      <label class="desc" id="title5" for="firstname">
       First name
       <span id="req_5" class="req">*</span>
       </label>
       <div>
-      <input id="firstname" name="Field5" type="text" class="field text medium" value="" maxlength="255" onkeyup="" required />
+      <input id="firstname" name="Field5" type="text" class="field text medium required" value="" maxlength="255" onkeyup="" />
       </div>
       </li><li id="foli6" class="notranslate      ">
-      <label class="desc" id="title6" for="Field6">
+      <label class="desc" id="title6" for="lastname">
       Last name
       <span id="req_6" class="req">*</span>
       </label>
       <div>
-      <input id="lastname" name="Field6" type="text" class="field text medium" value="" maxlength="255" onkeyup="" required />
+      <input id="lastname" name="Field6" type="text" class="field text medium required" value="" maxlength="255" onkeyup="" />
       </div>
       </li><li id="foli3" class="notranslate">
-      <label class="desc" id="title3" for="Field3">
+      <label class="desc" id="title3" for="email">
       Email address
       <span id="req_3" class="req">*</span>
       </label>
       <div>
-      <input id="email" name="Field3" type="text" spellcheck="false" class="field text medium" value="" maxlength="255" required /> 
+      <input id="email" name="Field3" type="text" spellcheck="false" class="field text medium required email" value="" maxlength="255" /> 
       </div>
       </li>
       <li id="foli8" class="notranslate      ">
@@ -209,8 +212,8 @@
       <![endif]-->
       <div>
       <span>
-      <input id="Field8" name="Field8" type="checkbox" class="field checkbox" value="Send me emails in plain text"/>
-      <label class="choice" for="Field8">Send me emails in plain text</label>
+      <input id="plain-text" name="plain-text" type="checkbox" class="field checkbox" value="Send me emails in plain text"/>
+      <label class="choice" for="plain-text">Send me emails in plain text</label>
       </span>
       </div>
       </fieldset>

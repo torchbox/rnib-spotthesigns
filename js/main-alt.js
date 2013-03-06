@@ -1,5 +1,6 @@
 $(function() {
     
+  // This is the text resizer that for accessibility. 
   $(".text-resizer a").click(function() {
     //Cache the DOM on this selector
     var rSize = $(this);
@@ -16,7 +17,38 @@ $(function() {
     }
   });
 
+  /**
+  * Sign up form JavaScript validation
+  * http://docs.jquery.com/Plugins/Validation
+  */
 
+// validate signup form on keyup and submit
+  $("#sign-up-form").validate({
+    rules: {
+      Field5: "required",
+      Field6: "required",
+      Field3: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      Field5: "Please enter your first name",
+      Field6: "Please enter your last name",
+      Field3: "Please enter a valid email address"
+    }
+  });  
+
+  // Options for the flexslider
+  $('.flexslider').flexslider({
+    animation: "slide",
+    prevText: "&#9664; Previous slide",          
+    nextText: "&#9654; Next slide",
+    keyboard: false,
+    pausePlay: true,
+    pauseText: 'Pause slideshow',
+    playText: 'Play slideshow'
+  });
 
 
   /**

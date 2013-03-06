@@ -684,15 +684,14 @@ a.button:hover,
   clear: both;
 }
 .site-header .brand {
-  text-indent: 1000%;
-  white-space: nowrap;
+   white-space: nowrap;
   overflow: hidden;
-  background: url('../img/RNIBLogo.png') left center no-repeat;
 }
 
 .site-header .brand a:focus {
   text-indent: 0;
   background: none;
+  border: 1px dotted #000;
 }
 
 .site-header .brand h1,
@@ -1157,6 +1156,7 @@ form label.error {
 .download-app .app-badge a:focus {
   text-indent: 0;
   background: transparent;
+  white-space: none;
 }
 
 .svg {
@@ -1336,24 +1336,48 @@ html[xmlns] .slides {
   *height: 0;
 }
 .flex-direction-nav a {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin: -20px 0 0;
   display: block;
-  background: url(../img/slides-nav.png) no-repeat 0 0 #d3dddc;
+  font-size: 0.9em;
+  /*background: url(../img/slides-nav.png) no-repeat 0 0 #d3dddc;*/
+  background: #2b6874;
+  border: 1px solid #2b6874;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  /*
   -webkit-background-size: 57px 24px;
   -moz-background-size: 57px 24px;
   -o-background-size: 57px 24px;
   background-size: 57px 24px;
+  */
   position: absolute;
   bottom: -2em;
   z-index: 10;
   cursor: pointer;
-  text-indent: -9999px;
+  color: #fff;
+  /*text-indent: -9999px; No accessible in IE8 accessibility mode*/
+}
+
+.flex-direction-nav a:hover,
+.flex-direction-nav a:focus {
+  text-decoration: underline;
 }
 
 .flex-direction-nav a:focus {
-  text-indent: 0px;
+  overflow: visible;
+  width: 160px;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  transition: all 0.1s;
+  -moz-transition: all 0.1s; /* Firefox 4 */
+  -webkit-transition: all 0.1s; /* Safari and Chrome */
+  -o-transition: all 0.1s; /* Opera */
 }
 
 .flex-pauseplay {
@@ -1369,9 +1393,13 @@ html[xmlns] .slides {
 .flex-direction-nav .flex-next {
   background-position: 100% 0;
   right: 0;
+  width: 22px;
+  padding-right: 3px;
 }
 .flex-direction-nav .flex-prev {
   left: 0;
+  width: 22px;
+  padding-left: 3px;
 }
 .flexslider:hover .flex-next,
 .flexslider:focus .flex-next {

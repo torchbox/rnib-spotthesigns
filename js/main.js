@@ -20,8 +20,8 @@ $(function() {
   // Options for the flexslider
   $('.flexslider').flexslider({
     animation: "slide",
-    prevText: "Previous slide",          
-    nextText: "Next slide",
+    prevText: "&#9664; Previous slide",          
+    nextText: "&#9654; Next slide",
     keyboard: false,
     pausePlay: true,
     pauseText: 'Pause slideshow',
