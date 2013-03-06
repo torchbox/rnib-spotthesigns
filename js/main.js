@@ -50,6 +50,24 @@ $(function() {
     }
   });  
 
+  if ($("html.lt-ie9")) {
+        var a = {};
+  
+        // Properties of a. 
+        a.videoid = 'Xitg5oyemxQ';
+        a.width = '800';
+        a.height = '467';
+        a.duration = '6:26';
+        a.HTMLid = 'video-embed';
+        a.path = 'swf/flashcontrols.swf';
+  
+        var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
+  
+        var params = {allowFullScreen: 'false'};
+  
+        swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
+  } else {
+
   /**
   * Enquire code for media query manipulation of the DOM
   * http://wicky.nillia.ms/enquire.js/#responding-to-queries
@@ -139,4 +157,6 @@ $(function() {
       }
 
   }).listen();
+
+  }
 });

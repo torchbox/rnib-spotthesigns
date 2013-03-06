@@ -1391,16 +1391,25 @@ html[xmlns] .slides {
   border: 0;
 }
 .flex-direction-nav .flex-next {
-  background-position: 100% 0;
   right: 0;
-  width: 22px;
-  padding-right: 3px;
+  width: 17px;
+  padding-left: 7px;
 }
 .flex-direction-nav .flex-prev {
   left: 0;
   width: 22px;
   padding-left: 3px;
 }
+
+.lt-ie9 .flex-direction-nav .flex-prev {
+  width: 17px;
+  padding-left: 7px;
+}
+
+.lt-ie9 .flex-direction-nav .flex-prev:focus {
+  width: 160px;
+}
+
 .flexslider:hover .flex-next,
 .flexslider:focus .flex-next {
   opacity: 1;
