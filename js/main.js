@@ -17,17 +17,15 @@ $(function() {
     }
   });
 
-  // Options for the flexslider
-  $('.flexslider').flexslider({
-    animation: "slide",
-    prevText: "&#9664; Previous slide",          
-    nextText: "&#9654; Next slide",
-    keyboard: false,
-    pausePlay: true,
-    pauseText: 'Pause slideshow',
-    playText: 'Play slideshow'
+  //Newsletter thank you message control
+  if(window.location.href.indexOf("#thanks") > -1) {
+    $('#form-message').slideDown("slow");
+  }
+  // Close the message
+  $("#form-message-close").click(function(e) {
+    e.preventDefault();
+    $('#form-message').slideUp("fast");  
   });
-
   /**
   * Sign up form JavaScript validation
   * http://docs.jquery.com/Plugins/Validation
@@ -50,113 +48,138 @@ $(function() {
     }
   });  
 
+  // Options for the flexslider
+  $('.flexslider').flexslider({
+    animation: "slide",
+    prevText: "&#9668; Previous slide",          
+    nextText: "&#9658; Next slide",
+    keyboard: false,
+    pausePlay: true,
+    pauseText: 'Pause slideshow',
+    playText: 'Play slideshow'
+  });
+
   if ($("html").hasClass("lt-ie9")) {
-        var a = {};
-  
-        // Properties of a. 
-        a.videoid = 'Xitg5oyemxQ';
-        a.width = '800';
-        a.height = '467';
-        a.duration = '6:26';
-        a.HTMLid = 'video-embed';
-        a.path = 'swf/flashcontrols.swf';
-  
-        var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
-  
-        var params = {allowFullScreen: 'false'};
-  
-        swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
+    $('.embed').append(accessbileMarkup);
+    $(document).ready(function(){
+      // Find all links to videos on youtube
+      var $yt_links = $("a[href*='http://www.youtube.com/watch']");
+      // Create players for our youtube links
+      $.each($yt_links, function(i) {
+          var $holder = $('<span />');
+          $(this).parent().replaceWith($holder);
+          // Find the captions file if it exists
+          var $mycaptions = $(this).siblings('.captions');
+          // Work out if we have captions or not
+          var captionsf = $($mycaptions).length > 0 ? $($mycaptions).attr('href') : null;
+          // Ensure that we extract the last part of the youtube link (the video id)
+          // and pass it to the player() method
+          var link = $(this).attr('href').split("=")[1];
+          // Initialise the player
+          $holder.player({
+            id: 'yt',
+            useHtml5 : true,
+            media: 'hRO-53fGEFQ',
+            logoURL : 'http://rnib.org.uk'
+          });
+      });
+    });
   } else {
+      /**
+      * Enquire code for media query manipulation of the DOM
+      * http://wicky.nillia.ms/enquire.js/#responding-to-queries
+      * https://github.com/WickyNilliams/enquire.js
+      */
 
-  /**
-  * Enquire code for media query manipulation of the DOM
-  * http://wicky.nillia.ms/enquire.js/#responding-to-queries
-  * https://github.com/WickyNilliams/enquire.js
-  */
+      // Store the mobile replacement video
+      var standardYouTubeMarkup = '<iframe id="main-youtube" class="youtube" width="300" height="169" src="http://www.youtube.com/embed/hRO-53fGEFQ?rel=0" frameborder="0" allowfullscreen></iframe>';
+      var accessbileMarkup = '<a href="http://www.youtube.com/watch?v=hRO-53fGEFQ">RNIB Bus video</a>';
+      enquire.register("screen and (min-width:850px)", {
 
-  // Store the mobile replacement video
-  var standardYouTubeMarkup = '<iframe id="main-youtube" class="youtube" width="300" height="169" src="http://www.youtube.com/embed/hRO-53fGEFQ?rel=0" frameborder="0" allowfullscreen></iframe>';
- 
-  enquire.register("screen and (min-width:850px)", {
+        match : function() {
+          (function(){
+          
+            //Removes the mobile youtube player.
+            $('.embed').children('#main-youtube').remove();
+            //Adds the previously removed mark up and ID required by the video
+            $('.embed').append(accessbileMarkup);      
 
-    match : function() {
-      (function(){
-      
-        //Removes the mobile youtube player.
-        $('.embed').children('#main-youtube').remove();
-        //Adds the previously removed mark up and ID required by the video
-        $('.embed').append('<div id="video-embed"></div>');      
+            $(document).ready(function(){
+              // Find all links to videos on youtube
+              var $yt_links = $("a[href*='http://www.youtube.com/watch']");
+              // Create players for our youtube links
+              $.each($yt_links, function(i) {
+                  var $holder = $('<span />');
+                  $(this).parent().replaceWith($holder);
+                  // Find the captions file if it exists
+                  var $mycaptions = $(this).siblings('.captions');
+                  // Work out if we have captions or not
+                  var captionsf = $($mycaptions).length > 0 ? $($mycaptions).attr('href') : null;
+                  // Ensure that we extract the last part of the youtube link (the video id)
+                  // and pass it to the player() method
+                  var link = $(this).attr('href').split("=")[1];
+                  // Initialise the player
+                  $holder.player({
+                    id: 'yt',
+                    useHtml5 : true,
+                    media: 'hRO-53fGEFQ',
+                    logoURL : 'http://rnib.org.uk'
+                  });
+              });
+            });
+          
+        })();
 
-      console.log("Match is happening.");
-        var a = {};
-  
-        // Properties of a. 
-        a.videoid = 'Xitg5oyemxQ';
-        a.width = '800';
-        a.height = '467';
-        a.duration = '6:26';
-        a.HTMLid = 'video-embed';
-        a.path = 'swf/flashcontrols.swf';
-  
-        var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
-  
-        var params = {allowFullScreen: 'false'};
-  
-        swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
-      
-    })();
+        },      // REQUIRED
+                                    // Triggered when the media query transitions 
+                                    // *from an unmatched state to a matched state*
 
-    },      // REQUIRED
-                                // Triggered when the media query transitions 
-                                // *from an unmatched state to a matched state*
-
-    unmatch : function() {
-      
-      console.log("Unmached");
-      (function(){
-        // Removed and mark up created by the flash player
-        $('.embed').children().remove();
-        // Adds the embed code for the youtube player.
-        $('.embed').append(standardYouTubeMarkup);
-    })();
-
-
-      
-    },    // OPTIONAL
-                                // If supplied, triggered when the media query transitions 
-                                // *from a matched state to an unmatched state*.
-
-    setup : function() {
-      
-      (function(){
-
-      })();
-    },      // OPTIONAL
-                                // If supplied, a one-time setup function 
-                                // triggered when the handler is first registered.                           
-
-    deferSetup : true,          // OPTIONAL, defaults to false
-                                // If set to true, defers execution the setup function until
-                                // the media query is first matched. Setup is still triggered just once.
-
-    destroy : function() {
+        unmatch : function() {
+          
+          console.log("Unmached");
+          (function(){
+            // Removed and mark up created by the flash player
+            $('.embed').children().remove();
+            // Adds the embed code for the youtube player.
+            $('.embed').append(standardYouTubeMarkup);
+        })();
 
 
-    }     //OPTIONAL
-                                // If supplied, triggered when a hander is unregistered (covered later). 
-                                // Enables you to provide lifecycle to responsive widgets. 
-                                // Put cleanup logic here.
+          
+        },    // OPTIONAL
+                                    // If supplied, triggered when the media query transitions 
+                                    // *from a matched state to an unmatched state*.
 
-  }).register("screen and (max-width:500px)", {
+        setup : function() {
+          
+          (function(){
 
-      match : function() {
-          // Removed and mark up created by the flash player
-          $('.embed').children().remove();
-          // Adds the embed code for the youtube player.
-          $('.embed').append(standardYouTubeMarkup);
-      }
+          })();
+        },      // OPTIONAL
+                                    // If supplied, a one-time setup function 
+                                    // triggered when the handler is first registered.                           
 
-  }).listen();
+        deferSetup : true,          // OPTIONAL, defaults to false
+                                    // If set to true, defers execution the setup function until
+                                    // the media query is first matched. Setup is still triggered just once.
 
+        destroy : function() {
+
+
+        }     //OPTIONAL
+                                    // If supplied, triggered when a hander is unregistered (covered later). 
+                                    // Enables you to provide lifecycle to responsive widgets. 
+                                    // Put cleanup logic here.
+
+      }).register("screen and (max-width:500px)", {
+
+          match : function() {
+              // Removed and mark up created by the flash player
+              $('.embed').children().remove();
+              // Adds the embed code for the youtube player.
+              $('.embed').append(standardYouTubeMarkup);
+          }
+
+      }).listen();
   }
 });

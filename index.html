@@ -1,40 +1,55 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-	<title>Spot the signs &ndash; RNIB</title>
-	
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Spot the Signs &ndash; RNIB</title>
+  
+  <meta charset="utf-8">
 
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-	    	    
-	<link rel="stylesheet" href="css/global.css" type="text/css" media="all" />	
-	<link rel="stylesheet" href="css/medium.css" type="text/css" media="screen and (min-width: 35.5em)" />
-	<link rel="stylesheet" href="css/large.css" type="text/css"  media="screen and (min-width: 54em)" />
-	<link rel="stylesheet" href="css/huge.css" type="text/css"  media="screen and (min-width: 87.5em)" />
-	<link rel="stylesheet" href="css/highdpi.css" type="text/css" media="screen and (-webkit-min-device-pixel-ratio: 1.25)" />
-	
-	<!--[if lt IE 9]>
-    	<link rel="stylesheet" href="css/medium.css" type="text/css" media="all" />
-    	<link rel="stylesheet" href="css/large.css" type="text/css" media="all" />
-	<![endif]-->
+  <meta name="description" content="Royal National Institute of Blind People Spot the Signs website about age-related macular degeneration and other degenerative eye conditions.">
+  <meta name="viewport" content="width=device-width">
+            
+  <link rel="stylesheet" href="css/global.css" type="text/css" media="all" /> 
+  <link rel="stylesheet" href="css/player-core.css" type="text/css" media="all" /> 
+  <link rel="stylesheet" href="css/player-theme.css" type="text/css" media="all" /> 
+  <link rel="stylesheet" href="css/medium.css" type="text/css" media="screen and (min-width: 35.5em)" />
+  <link rel="stylesheet" href="css/large.css" type="text/css"  media="screen and (min-width: 54em)" />
+  <link rel="stylesheet" href="css/huge.css" type="text/css"  media="screen and (min-width: 87.5em)" />
+  <link rel="stylesheet" href="css/highdpi.css" type="text/css" media="screen and (-webkit-min-device-pixel-ratio: 1.25)" />
+  
+  <!--[if lt IE 9]>
+      <link rel="stylesheet" href="css/medium.css" type="text/css" media="all" />
+      <link rel="stylesheet" href="css/large.css" type="text/css" media="all" />
+  <![endif]-->
 
-	<script type="text/javascript" src="js/vendor/modernizer.min.js"></script>	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/vendor/jquery.validate.min.js"> </script>
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+      google.load("jquery", "1.6.0");
+      google.load("jqueryui", "1.8.13");
+  </script>
+
+  <script type="text/javascript" src="js/vendor/modernizer.min.js"></script>  
+  <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+  <script type="text/javascript" src="js/vendor/jquery.validate.min.js"> </script>
   <script type="text/javascript" src="js/vendor/swfobject.js"> </script>
-	<script type="text/javascript" src="js/vendor/jquery.flexslider-min.js"> </script>
-	<script src="js/vendor/enquire.js"></script>
+  <script type="text/javascript" src="js/vendor/jquery.flexslider-min.js"> </script>
+  <script src="js/vendor/enquire.js"></script>
   <script src="js/main.js"></script>
+
+
+ 
+  <script type="text/javascript" src="core/javascript/swfobject/swfobject.js"></script>
+  <!-- Include the accessible media player script -->
+  <script type="text/javascript" src="core/javascript/jquery.player.js"></script>
+
+
 </head>
 
 <body>
     <header role="banner" class="site-header">
-        <div class="access">
+       <div class="access">
             <div class="container">
                 <div class="skip-links">
                   <a href="#main-content">Skip to main content</a>
@@ -42,9 +57,9 @@
                 <div class="text-resizer">
                     <p>Change text size</p>
                     <ul>
-                    	<li><a href="#" class="resize-normal" title="Small text">A</a></li>
-                    	<li><a href="#" class="resize-plus-one" title="Medium text">A</a></li>
-                    	<li><a href="#" class="resize-plus-two" title="Large text">A</a></li>
+                      <li><a href="#" class="resize-normal" title="Small text">A</a></li>
+                      <li><a href="#" class="resize-plus-one" title="Medium text">A</a></li>
+                      <li><a href="#" class="resize-plus-two" title="Large text">A</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,10 +67,10 @@
         <div class="container">
             <nav class="secondary-nav" role="navigation">
                 <ul>
-                  <li><a href="##"><abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr> helpline</a></li>
-                	<li><a href="##">Contact us</a></li>
-                	<li><a href="##">Help</a></li>
-                	                	
+                    <li><a href="#"><abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr> helpline</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Help</a></li>
+                                    
                 </ul>
             </nav>
             <div class="brand">
@@ -67,20 +82,26 @@
         </div>
     </header>
     <article role="main">
-    
+    <div id="form-message">
+      <div class="container">
+        <a id="form-message-close" href="#">Close</a>
+        <h2>Thanks!</h2>
+        <p>You have signed up to our quarterly newsletter.</p>
+      </div>
+    </div>
     <section class="introduction">
       <div class="container">
         <div class="title">
-        	<h1><span>Save your sight</span> Spot the signs</h1>
-        	<p>Age-related macular degeneration and other degenerative eye conditions can destroy your sight in just three months. And if you’re over 50 you’re most at risk. But we can help</p>
+          <h1><span>Save your sight</span> Spot the signs</h1>
+          <p>Age-related macular degeneration and other degenerative eye conditions can destroy your sight in just three months. And if you’re over 50 you’re most at risk. But we can help</p>
         </div>
 
       <div class="download-pack">
         <h2>Download the information pack</h2>
        
         <a href="#" class="button">
-        	<span class="alpha">Download the fact sheet</span>
-	       <span class="beta">.pdf file</span>
+          <span class="alpha">Download the fact sheet</span>
+         <span class="beta">.pdf file</span>
         </a>
   
       </div>
@@ -125,9 +146,9 @@
 
     <section class="about-rnib">
       <div class="container">
-            	<h2>About the <abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr></h2>
+              <h2>About the <abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr></h2>
 
-      	        <div class="about-content">
+                <div class="about-content">
           <div class="flexslider">
           <ul class="slides">
             <li>
@@ -144,114 +165,103 @@
             </li>
           </ul>
         </div>
-			<p>Royal National Institute of Blind People (RNIB) is the leading charity offering information, support and advice to almost two million people with sight loss.</p>
-			<p>If you or a loved one has a sight problem, we can help. We have practical ways to help you live with sight loss. We've got advice to help you travel, shop and manage your money and finances independently. We've also got advice on technology for blind and partially sighted people.</p>
-    	</div>
+      <p>Royal National Institute of Blind People (RNIB) is the leading charity offering information, support and advice to almost two million people with sight loss.</p>
+      <p>If you or a loved one has a sight problem, we can help. We have practical ways to help you live with sight loss. We've got advice to help you travel, shop and manage your money and finances independently. We've also got advice on technology for blind and partially sighted people.</p>
+      </div>
 <div class="newsletter-form-wrap">
-	  	<form id="sign-up-form" name="form1" class="wufoo topLabel newsletter-form" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
-	action="https://martinisatorchbox.wufoo.com/forms/z7x3p3/#public">
-	        <h3>Sign up for our newsletter</h3>
-	        <p>Eye health tips and news from the RNIB delivered quarterly to your inbox.</p>
-          <p>All fields marked with an asterisk (*) are mandatory.</p>
-	        <ul>
-			        
-			        <li id="foli5" class="notranslate      ">
-			<label class="desc" id="title5" for="firstname">
-			First name
-			<span id="req_5" class="req">*</span>
-			</label>
-			<div>
-			<input id="firstname" name="Field5" type="text" class="field text medium required" value="" maxlength="255" onkeyup="" />
-			</div>
-			</li><li id="foli6" class="notranslate      ">
-			<label class="desc" id="title6" for="lastname">
-			Last name
-			<span id="req_6" class="req">*</span>
-			</label>
-			<div>
-			<input id="lastname" name="Field6" type="text" class="field text medium required" value="" maxlength="255" onkeyup="" />
-			</div>
-			</li><li id="foli3" class="notranslate">
-			<label class="desc" id="title3" for="email">
-			Email address
-			<span id="req_3" class="req">*</span>
-			</label>
-			<div>
-			<input id="email" name="Field3" type="text" spellcheck="false" class="field text medium required email" value="" maxlength="255" /> 
-			</div>
-			</li>
-			<li id="foli8" class="notranslate">
-			<fieldset>
-			<!--<![if !IE | (gte IE 8)]>
-			<legend id="title8" class="desc">
-			Email format
-			<span id="req_8" class="req">*</span>
-			</legend>
-			<![endif]>-->
-			<!--[if lt IE 8]>
-			<label id="title8" class="desc">
-			Email format
-			<span id="req_8" class="req">*</span>
-			</label>
-			<![endif]-->
-			<div>
-			<span>
-			<input id="plain-text" name="plain-text" type="checkbox" class="field checkbox" value="Send me emails in plain text"/>
-			<label class="choice" for="plain-text">Send me emails in plain text</label>
-			</span>
-			</div>
-			</fieldset>
-			</li>
-			
-			<li class="buttons">
-  			<div>
-  			     <input id="saveForm" name="saveForm" class="button submit" 
-  			    type="submit" value="Sign up"
-  			 /></div>
-			</li>
-			
-			<li class="hide">
-			<label for="comment">Do Not Fill This Out</label>
-			<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-			<input type="hidden" id="idstamp" name="idstamp" value="Dhf/5WjDpvHLi20i+ojpaK6+WgtnPbvYJR0ORVmmjdI=" />
-			</li>
-			
+            
+       <form id="sign-up-form" name="form1" class="wufoo topLabel page newsletter-form" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+      action="https://rnib.wufoo.com/forms/z7x3p3/#public">
+
+            <h3>Sign up for our newsletter</h3>
+            <p>Eye health tips and news from the RNIB delivered quarterly to your inbox.</p>
+            <p>All fields marked with an asterisk (*) are mandatory.</p>
+         <ul>
+
+          <li id="foli1" class="notranslate">
+          <label class="desc" id="title1" for="Field1">
+          First name
+          <span id="req_1" class="req">*</span>
+          </label>
+          <div>
+          <input id="Field1" name="Field1" type="text" class="field text medium required" value="" maxlength="255" onkeyup="" />
+          </div>
+          </li><li id="foli2" class="notranslate      ">
+          <label class="desc" id="title2" for="Field2">
+          Last name
+          <span id="req_2" class="req">*</span>
+          </label>
+          <div>
+          <input id="Field2" name="Field2" type="text" class="field text medium required" value="" maxlength="255" onkeyup="" required />
+          </div>
+          </li><li id="foli4" class="notranslate      ">
+          <label class="desc" id="title4" for="Field4">
+          Email address
+          <span id="req_4" class="req">*</span>
+          </label>
+          <div>
+          <input id="Field4" name="Field4" type="email" spellcheck="false" class="field text medium required email" value="" maxlength="255" /> 
+          </div>
+          </li>
+          <li id="foli7" class="notranslate ">
+          <fieldset>
+          <div>
+          <span>
+          <input id="Field7" name="Field7" type="checkbox" class="field checkbox" value="Send me emails in plain text"/>
+          <label class="choice" for="Field7">Send me emails in plain text</label>
+          </span>
+          </div>
+          </fieldset>
+          </li>
+
+           <li class="buttons ">
+          <div>
+
+            <input id="saveForm" name="saveForm" class="btTxt submit button" type="submit" value="Submit"/>
+         </div>
+          </li>
+
+          <li class="hide">
+          <label for="comment">Do Not Fill This Out</label>
+          <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+          <input type="hidden" id="idstamp" name="idstamp" value="iAR/DtXFb8A9MKZFeZ7+0zmJcvO1/FwfXyJ8JVdCcA0=" />
+          </li>
         </ul>
-        </form>
-      	</div>
+      </form> 
+      </div>
 
       </div>
     </section>
     
     <section class="multimedia">
-    	<div class="container">
-      	<div class="video-embed">
-      		<h2>Spot the signs advert</h2>
-      		 <p><a href="#" class="transcript">Download a transcript of the cinema advert</a> <a href="#" class="radio">Listen to the radio advert</a></p>
-      		<div class="embed">
-      		 
-  	    		<div id="video-embed">
-
-  	    		</div>
-      		</div>
-      	</div>
-    	</div>
+      <div class="container">
+        <div class="video-embed">
+          <h2>Spot the signs advert</h2>
+           <p><a href="#" class="transcript">Download a transcript of the cinema advert</a> <a href="#" class="radio">Listen to the radio advert</a></p>
+          <div class="embed">
+           
+            <div id="video-embed">
+              <a href="http://www.youtube.com/watch?v=hRO-53fGEFQ">RNIB Bus video</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     
    
     
     <section class="download-app">
-    	<div class="container">
-    		<div class="app-content">
-    			<h2>Download the app</h2>
-    			<p>See how the different stages of AMD affect your sight with our app. Available free for the iPhone and iPad on the <a href="#">App Store</a></p>
-    		</div>
-    		<div class="app-badge">
-    			<a href="#" tabindex="-1">
-	    			Available on the App Store
-    			</a>
-    		</div>
-    	</div>
+      <div class="container">
+        <div class="app-content">
+          <h2>Download the app</h2>
+          <p>See how the different stages of AMD affect your sight with our app. Available free for the iPhone and iPad on the <a href="#">App Store</a></p>
+        </div>
+        <div class="app-badge">
+          <a href="#" tabindex="-1">
+            Available on the App Store
+          </a>
+        </div>
+      </div>
     </section>
      <section class="what-next">
       <div class="container">
@@ -271,7 +281,7 @@
                 
                     &copy; 2013 Royal National Institute of Blind People
                 </p>
-            <ul class="contact-info" xmlns:rs="urn:schemas-microsoft-com:rowset">
+            <ul class="contact-info">
                 
                 <li>
                     <a href="http://www.rnib.org.uk/aboutus/aboutthiswebsite/legal/Pages/legal.aspx">Terms and conditions</a>

@@ -149,7 +149,7 @@ var html5_methods = {
 				rewind: true,	// Whether or not to show the rewind button
 				toggle: true	// If this is set to false, both play and pause buttons will  be provided
 			},
-			logoURL : 'http://rnib.local/img/rniblogo.png',	// A url or path to the logo to use within the player.  
+			logoURL : 'http://rnib.local/',	// A url or path to the logo to use within the player.  
 			useHtml5 : true,	// Whether or not the player will make use of HTML5 video (if it is supported)
 			swfCallback : null	// If we are using a swf, optionally provide a callback function, currently used with 
 		};
@@ -664,7 +664,7 @@ var html5_methods = {
 			getControls : function(){
 				var $controls = $('<span />').addClass('ui-corner-bottom').addClass('control-bar');
 				// Insert the Nomensa Logo
-				var $logo = $('<a />').attr('href', 'http://www.nomensa.com?ref=logo').html('Accessible Media Player by Nomensa').addClass('logo');
+				var $logo = $('<a />').attr('href', 'http://rnib.org.uk').html('Accessible Media Player by Nomensa').addClass('logo');
 				$controls.append($logo);
 				var $func = this.getFuncControls();
 				var $vol = this.getVolControls();
