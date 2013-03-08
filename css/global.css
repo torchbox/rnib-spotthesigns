@@ -620,6 +620,8 @@ a.button:hover,
 }
 .access .text-resizer {
   float: right;
+  margin-top: 3px;
+  color: #fff;
 }
 .access .skip-links {
   float: left;
@@ -838,7 +840,8 @@ a.button:hover,
   font-size: .75em;
   line-height: 1.4em;
 }
-.download-pack .button {
+.download-pack .button,
+.what-next .button {
   -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -849,17 +852,36 @@ a.button:hover,
   -o-background-size: 60px 60px;
   background-size: 60px 60px;
 }
-.download-pack .button span {
+
+.what-next .button {
+  background: url(../img/download-again.png) 10px 12px no-repeat #d93f02;
+  padding-left: 2.5em;
+}
+
+.download-pack .button span,
+.what-next .button span {
   display: block;
   margin-right: 40%;
 }
-.download-pack .button .alpha {
+
+.what-next .button span {
+  margin-right: 0;
+}
+
+.download-pack .button .alpha,
+.what-next .button .alpha {
   font-size: 1.3125em;
   font-weight: bold;
   color: #fff;
   margin-bottom: 0.33em;
 }
-.download-pack .button .beta {
+
+.what-next .button .alpha {
+  font-size: 1em;
+}
+
+.download-pack .button .beta,
+.what-next .button .beta {
   color: #fff;
   font-size: 0.75em;
   font-style: italic;
@@ -867,18 +889,27 @@ a.button:hover,
 }
 .download-pack .button:hover,
 .download-pack .button:focus,
-.download-pack .button:active {
+.download-pack .button:active,
+.what-next .button:hover,
+.what-next .button:focus,
+.what-next .button:active {
   background-color: #333333;
   text-decoration: none;
 }
 .download-pack .button:hover .alpha,
 .download-pack .button:focus .alpha,
-.download-pack .button:active .alpha {
+.download-pack .button:active .alpha,
+.what-next .button:hover .alpha,
+.what-next .button:focus .alpha,
+.what-next .button:active .alpha {
   text-decoration: underline;
 }
 .download-pack .button:hover span,
 .download-pack .button:focus span,
-.download-pack .button:active span {
+.download-pack .button:active span,
+.what-next .button:hover span,
+.what-next .button:focus span,
+.what-next .button:active span  {
   color: #fff;
 }
 /* Introduction */

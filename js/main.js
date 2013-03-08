@@ -17,15 +17,68 @@ $(function() {
     }
   });
 
+  //Floodlight tracking code function 
+  function callFloodAndThankyou() {
+    /*
+    Tag for Activity Group: RNIB, Activity Name: RNIB Confirmation Page, Activity ID: 1210210
+    Expected URL: https://www.rnib.org.uk/ 
+    Activity ID: 1210210
+    Activity Name: RNIB Confirmation Page
+    Activity Group Name: RNIB
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: RNIB Confirmation Page
+    URL of the webpage where the tag is expected to be placed: https://www.rnib.org.uk/
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 02/01/2013
+    */
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="https://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=rnibc051;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+  }  
+
   //Newsletter thank you message control
   if(window.location.href.indexOf("#thanks") > -1) {
     $('#form-message').slideDown("slow");
+    callFloodAndThankyou();
   }
   // Close the message
   $("#form-message-close").click(function(e) {
     e.preventDefault();
     $('#form-message').slideUp("fast");  
   });
+
+  //Floodlight tracking code function 
+  function callFloodAndPDF() {
+    /*
+    Tag for Activity Group: RNIB, Activity Name: FactSheet Download on click, Activity ID: 1242178 -->
+    Expected URL: http://www.rnibspotthesigns.org.uk 
+    Activity ID: 1242178
+    Activity Name: FactSheet Download on click
+    Activity Group Name: RNIB
+
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: FactSheet Download on click
+    URL of the webpage where the tag is expected to be placed: http://www.rnibspotthesigns.org.uk
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 03/07/2013
+    */
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="http://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=facts860;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+  }
+
+  // PDF download tracking trigger click event
+  $("a.pdf-download").click(function(e) {
+    // Trigger the code.
+    callFloodAndPDF();
+    // Send the user back on their journey
+    var url = $(this).attr('href');
+    window.location.href = url;
+    return false;
+
+  });
+
+
   /**
   * Sign up form JavaScript validation
   * http://docs.jquery.com/Plugins/Validation
