@@ -615,12 +615,14 @@ a.button:hover,
   background-color: #008193;
   margin-bottom: 1em;
 }
+.access .container {
+  padding-top: 4px;
+}
 .access a {
   color: #fff;
 }
 .access .text-resizer {
   float: right;
-  margin-top: 3px;
   color: #fff;
 }
 .access .skip-links {
