@@ -471,6 +471,11 @@ body {
   line-height: 1.5em;
   color: #333;
 }
+
+.lt-ie9 body .video-embed *:focus {
+  border: 1px dotted #000;
+}
+
 .large {
   font-size: 1.3em;
 }
@@ -610,11 +615,18 @@ a.button:hover,
   background-color: #008193;
   margin-bottom: 1em;
 }
+.access .container {
+  padding-top: 4px;
+}
 .access a {
   color: #fff;
 }
 .access .text-resizer {
   float: right;
+  color: #fff;
+}
+.access .skip-links {
+  float: left;
 }
 .access .text-resizer ul {
   list-style: none outside none;
@@ -634,7 +646,8 @@ a.button:hover,
 .access .text-resizer ul:after {
   clear: both;
 }
-.access .text-resizer ul li {
+.access .text-resizer ul li,
+.access .skip-links {
   display: inline-block;
   /* IE7 fix */
 
@@ -679,12 +692,21 @@ a.button:hover,
 .site-header:after {
   clear: both;
 }
-.site-header .brand h1 {
-  text-indent: 1000%;
-  white-space: nowrap;
-  overflow: hidden;
-  background: transparent url('../img/rniblogo.png') center center no-repeat;
+.site-header .brand {
+   white-space: nowrap;
 }
+
+.site-header .brand img {
+  width: 75%;
+  height: auto;
+}
+
+.site-header .brand a:focus {
+  text-indent: 0;
+  background: none;
+  border: 1px dotted #000;
+}
+
 .site-header .brand h1,
 .site-header .brand a {
   display: block;
@@ -820,7 +842,8 @@ a.button:hover,
   font-size: .75em;
   line-height: 1.4em;
 }
-.download-pack .button {
+.download-pack .button,
+.what-next .button {
   -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -831,17 +854,36 @@ a.button:hover,
   -o-background-size: 60px 60px;
   background-size: 60px 60px;
 }
-.download-pack .button span {
+
+.what-next .button {
+  background: url(../img/download-again.png) 10px 12px no-repeat #d93f02;
+  padding-left: 2.5em;
+}
+
+.download-pack .button span,
+.what-next .button span {
   display: block;
   margin-right: 40%;
 }
-.download-pack .button .alpha {
+
+.what-next .button span {
+  margin-right: 0;
+}
+
+.download-pack .button .alpha,
+.what-next .button .alpha {
   font-size: 1.3125em;
   font-weight: bold;
   color: #fff;
   margin-bottom: 0.33em;
 }
-.download-pack .button .beta {
+
+.what-next .button .alpha {
+  font-size: 1em;
+}
+
+.download-pack .button .beta,
+.what-next .button .beta {
   color: #fff;
   font-size: 0.75em;
   font-style: italic;
@@ -849,18 +891,27 @@ a.button:hover,
 }
 .download-pack .button:hover,
 .download-pack .button:focus,
-.download-pack .button:active {
+.download-pack .button:active,
+.what-next .button:hover,
+.what-next .button:focus,
+.what-next .button:active {
   background-color: #333333;
   text-decoration: none;
 }
 .download-pack .button:hover .alpha,
 .download-pack .button:focus .alpha,
-.download-pack .button:active .alpha {
+.download-pack .button:active .alpha,
+.what-next .button:hover .alpha,
+.what-next .button:focus .alpha,
+.what-next .button:active .alpha {
   text-decoration: underline;
 }
 .download-pack .button:hover span,
 .download-pack .button:focus span,
-.download-pack .button:active span {
+.download-pack .button:active span,
+.what-next .button:hover span,
+.what-next .button:focus span,
+.what-next .button:active span  {
   color: #fff;
 }
 /* Introduction */
@@ -955,6 +1006,7 @@ about section
 }
 .about-rnib .button {
   background: #333333;
+  border: 1px solid #333333;
 }
 .about-rnib .button:hover {
   background: #d93f02;
@@ -973,6 +1025,22 @@ about section
 .about-rnib .newsletter-form p {
   font-size: 0.875em;
 }
+
+#form-message {
+  background: #f1f1f1;
+  border-bottom: 1px solid #e9e9e9;
+  display: none;
+}
+
+#form-message .container {
+  width: 90%;
+  padding: 3%;
+}
+
+#form-message-close {
+  float: right;
+}
+
 .about-rnib .about-content p {
   font-size: 0.875em;
 }
@@ -994,7 +1062,7 @@ about section
 }
 .about-rnib input[type="email"],
 .about-rnib input[type="text"] {
-  border: none;
+  border: 1px solid #2b6874;
   padding: 2%;
   width: 96%;
   max-width: 100%;
@@ -1014,6 +1082,19 @@ about section
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+
+form label.error {
+  color: #fff;
+  font-weight: bold;
+}
+
+.about-rnib input[type="email"].error,
+.about-rnib input[type="text"].error {
+  border: 1px solid #ff3333;
+  -webkit-box-shadow:  0px 0px 10px #ff3333;      
+  box-shadow:  0px 0px 10px #ff3333;
+}
+
 .about-rnib legend {
   position: absolute;
   overflow: hidden;
@@ -1078,6 +1159,14 @@ about section
   display: block;
   margin: 0 auto;
 }
+
+#main-youtube {
+  width: 95%;
+  min-height: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
 .multimedia .sharing h2 {
   color: #d93f02;
 }
@@ -1122,6 +1211,12 @@ about section
   background-repeat: no-repeat;
   display: block;
 }
+.download-app .app-badge a:focus {
+  text-indent: 0;
+  background: transparent;
+  white-space: none;
+}
+
 .svg {
   /* Using Modernizer to check for svg support */
 
@@ -1160,6 +1255,7 @@ about section
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -1176,7 +1272,8 @@ about section
   -moz-background-size: 24px 24px;
   -o-background-size: 24px 24px;
   background-size: 24px 24px;
-  background-position: left center;
+  */
+  background-position: 10px center;
   background-repeat: no-repeat;
   background-color: #d93f02;
   background-position-x: .5em;
@@ -1299,28 +1396,81 @@ html[xmlns] .slides {
   *height: 0;
 }
 .flex-direction-nav a {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin: -20px 0 0;
   display: block;
-  background: url(../img/slides-nav.png) no-repeat 0 0;
+  font-size: 0.9em;
+  /*background: url(../img/slides-nav.png) no-repeat 0 0 #d3dddc;*/
+  background: #2b6874;
+  border: 1px solid #2b6874;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  text-align: center;
+  /*
   -webkit-background-size: 57px 24px;
   -moz-background-size: 57px 24px;
   -o-background-size: 57px 24px;
   background-size: 57px 24px;
+  */
   position: absolute;
   bottom: -2em;
   z-index: 10;
   cursor: pointer;
-  text-indent: -9999px;
+  color: #fff;
+  line-height: 1.7em;
+  /*text-indent: -9999px; No accessible in IE8 accessibility mode*/
+}
+
+.flex-direction-nav a:hover,
+.flex-direction-nav a:focus {
+  text-decoration: underline;
+}
+
+.flex-direction-nav a:focus {
+  overflow: visible;
+  width: 160px;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  transition: all 0.1s;
+  -moz-transition: all 0.1s; /* Firefox 4 */
+  -webkit-transition: all 0.1s; /* Safari and Chrome */
+  -o-transition: all 0.1s; /* Opera */
+}
+
+.flex-pauseplay {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 .flex-direction-nav .flex-next {
-  background-position: 100% 0;
   right: 0;
+  width: 20px;
+  padding-left: 5px;
 }
 .flex-direction-nav .flex-prev {
   left: 0;
+  width: 25px;
 }
+
+.lt-ie9 .flex-direction-nav .flex-prev {
+  width: 17px;
+  padding-left: 7px;
+}
+
+.lt-ie9 .flex-direction-nav .flex-prev:focus {
+  width: 160px;
+}
+
 .flexslider:hover .flex-next,
 .flexslider:focus .flex-next {
   opacity: 1;
@@ -1442,3 +1592,4 @@ html[xmlns] .slides {
   padding: 0;
   margin-bottom: 2em;
 }
+
