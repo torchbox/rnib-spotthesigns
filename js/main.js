@@ -38,7 +38,7 @@ $(function() {
 
   //Newsletter thank you message control
   console.log(window.location.search.replace( "?", "" ));
-  if(window.location.search.replace( "?", "" )) {
+  if(window.location.search.replace( "?", "" ) == "thanks") {
     $('#form-message').slideDown("slow");
     callFloodAndThankyou();
   }
