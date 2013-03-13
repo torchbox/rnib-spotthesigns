@@ -37,7 +37,8 @@ $(function() {
   }  
 
   //Newsletter thank you message control
-  if(window.location.href.indexOf("?thanks") > -1) {
+  console.log(window.location.search.replace( "?", "" ));
+  if(window.location.search.replace( "?", "" )) {
     $('#form-message').slideDown("slow");
     callFloodAndThankyou();
   }
