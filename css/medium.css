@@ -38,6 +38,12 @@
 body {
   line-height: 1.6em;
 }
+
+.site-header .brand img {
+  width: 100%;
+  height: auto;
+}
+
 .page-content,
 .navigation {
   margin: 0 auto;
@@ -52,6 +58,12 @@ body {
 .site-header {
   padding-bottom: 1em;
 }
+
+#form-message .container {
+  width: 65%;
+  padding: 3%;
+}
+
 .introduction {
   background: #ffffff url(../img/flare.png) 150px 70% no-repeat;
   background-size: 700px;
