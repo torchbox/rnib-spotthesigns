@@ -1411,7 +1411,7 @@ html[xmlns] .slides {
   margin: -20px 0 0;
   display: block;
   font-size: 0.9em;
-  /*background: url(../img/slides-nav.png) no-repeat 0 0 #d3dddc;*/
+  /*background: url(../img/slides-nav.png) no-repeat 0 0 #d3dddc; */
   background: #2b6874;
   border: 1px solid #2b6874;
   -webkit-border-radius: 20px;
