@@ -64,6 +64,11 @@ body {
   padding: 3%;
 }
 
+.flex-control-paging li a {
+  margin: 0;
+  padding: 0;
+}
+
 .introduction {
   background: #ffffff url(../img/flare.png) 150px 70% no-repeat;
   background-size: 700px;

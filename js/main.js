@@ -146,7 +146,7 @@ $(function() {
       */
 
       // Store the mobile replacement video
-      var standardYouTubeMarkup = '<iframe id="main-youtube" class="youtube" width="300" height="169" src="http://www.youtube.com/embed/hRO-53fGEFQ?rel=0" frameborder="0" allowfullscreen></iframe>';
+      var standardYouTubeMarkup = '<iframe id="main-youtube" class="youtube" width="300" height="169" src="http://www.youtube.com/embed/fwYtihO3450?rel=0" frameborder="0" allowfullscreen></iframe>';
       var accessbileMarkup = '<a href="http://www.youtube.com/watch?v=fwYtihO3450">RNIB Cinema advert on Youtube</a>';
       enquire.register("screen and (min-width:850px)", {
 
