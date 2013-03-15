@@ -522,6 +522,9 @@ h4 {
   margin-bottom: 0.5em;
   line-height: 1.2em;
 }
+abbr[title] {
+  border: none;
+}
 img {
   max-width: 100%;
 }
