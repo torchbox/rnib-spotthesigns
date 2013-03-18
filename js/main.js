@@ -65,7 +65,7 @@ $(function() {
     */
     var axel = Math.random() + "";
     var a = axel * 10000000000000;
-    document.write('<iframe src="http://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=facts860;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    $('body').append('<iframe src="http://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=facts860;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
   }
 
   // PDF download tracking trigger click event
