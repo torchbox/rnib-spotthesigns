@@ -1564,6 +1564,44 @@ html[xmlns] .slides {
   opacity: 1;
   cursor: default;
 }
+
+.download-pack a.pdf-other-lang,
+a.pdf-other-lang {
+  display: block;
+  width: 310px;
+}
+
+.what-next a.pdf-other-lang{
+  width: 266px;
+}
+
+.download-pack a.pdf-other-lang {
+  float: right;
+}
+
+a.pdf-other-lang {
+  color: #333;
+  font-size: 0.75em;
+  line-height: 1.3em;
+  text-align: right;
+  text-decoration: none;
+}
+
+a.pdf-other-lang:hover span {
+  color: #d93f02;
+}
+
+a.pdf-other-lang span.alpha {
+  text-decoration: underline;
+}
+
+a.pdf-other-lang span.beta {
+  text-decoration: none;
+  font-style: italic;
+  display: block;
+}
+
+
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev {
     opacity: 1;
