@@ -1,428 +1,382 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-	<title>Spot the signs &ndash; RNIB</title>
-	
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Spot the Signs &ndash; RNIB</title>
 
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-	    	    
-	<link rel="stylesheet" href="css/global.css" type="text/css" media="all" />	
+	<meta charset="utf-8">
+	<meta name="description" content="Save your sight, spot the signs of age-related macular degeneration
+	(AMD) and other eye conditions. Advice from RNIB's eye health experts.">
+	<meta name="viewport" content="width=device-width">
+	<meta name="google-site-verification" content="hDJcaOCqvupW8GTtI1KsInhWzJtBKVOwXoBHHMjUbMo" />     
+	<link rel="stylesheet" href="css/global.css" type="text/css" media="all" /> 
+	<link rel="stylesheet" href="css/player-core.css" type="text/css" media="all" /> 
+	<link rel="stylesheet" href="css/player-theme.css" type="text/css" media="all" /> 
 	<link rel="stylesheet" href="css/medium.css" type="text/css" media="screen and (min-width: 35.5em)" />
 	<link rel="stylesheet" href="css/large.css" type="text/css"  media="screen and (min-width: 54em)" />
 	<link rel="stylesheet" href="css/huge.css" type="text/css"  media="screen and (min-width: 87.5em)" />
 	<link rel="stylesheet" href="css/highdpi.css" type="text/css" media="screen and (-webkit-min-device-pixel-ratio: 1.25)" />
-	
-	<!--[if lt IE 9]>
-    	<link rel="stylesheet" href="css/medium.css" type="text/css" media="all" />
-    	<link rel="stylesheet" href="css/large.css" type="text/css" media="all" />
-	<![endif]-->
+	<link rel="shortcut icon" href="img/favicon.ico" />
 
-	<script type="text/javascript" src="js/vendor/modernizer.min.js"></script>	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/vendor/swfobject.js"> </script>
-	<script type="text/javascript" src="js/vendor/jquery.flexslider-min.js"> </script>
-	
-	 <script src="js/vendor/enquire.js"></script>
-     <script>
-		enquire.register("screen and (min-width:850px)", {
-		
-		    match : function() {
-			    (function(){
+  <!--[if lt IE 9]>
+	  <link rel="stylesheet" href="css/medium.css" type="text/css" media="all" />
+	  <link rel="stylesheet" href="css/large.css" type="text/css" media="all" />
+	  <![endif]-->
 
-				var a = {};
-			
-					a.videoid = 'Xitg5oyemxQ';
-			
-					a.width = '800';
-			
-					a.height = '467';
-			
-					a.duration = '6:26';
-			
-					a.HTMLid = 'video-embed';
-			
-					a.path = 'swf/flashcontrols.swf';
-			
-					var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
-			
-					var params = {allowFullScreen: 'true'};
-			
-					swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
-			
-				})();
-   
-		    },      // REQUIRED
-		                                // Triggered when the media query transitions 
-		                                // *from an unmatched state to a matched state*
-		
-		    unmatch : function() {
-			    
-			    (function(){
+	  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	  <script type="text/javascript">
+	  google.load("jquery", "1.6.0");
+	  google.load("jqueryui", "1.8.13");
+	  </script>
 
-				var a = {};
-			
-					a.videoid = 'Xitg5oyemxQ';
-			
-					a.width = '300';
-			
-					a.height = '200';
-			
-					a.duration = '6:26';
-			
-					a.HTMLid = 'video-embed';
-			
-					a.path = 'swf/flashcontrols.swf';
-			
-					var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
-			
-					var params = {allowFullScreen: 'true'};
-			
-					swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
-			
-				})();
+	  <script type="text/javascript" src="js/vendor/modernizer.min.js"></script>  
+	  <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+	  <script type="text/javascript" src="js/vendor/jquery.validate.min.js"> </script>
+	  <script type="text/javascript" src="js/vendor/swfobject.js"> </script>
+	  <script type="text/javascript" src="js/vendor/jquery.flexslider-min.js"> </script>
+	  <script src="js/vendor/enquire.js"></script>
+	  <script src="js/main.js"></script>
 
 
-			    
-		    },    // OPTIONAL
-		                                // If supplied, triggered when the media query transitions 
-		                                // *from a matched state to an unmatched state*.
-		
-		    setup : function() {
-			    
-			    (function(){
+	  
+	  <script type="text/javascript" src="core/javascript/swfobject/swfobject.js"></script>
+	  <!-- Include the accessible media player script -->
+	  <script type="text/javascript" src="core/javascript/jquery.player.js"></script>
 
-				var a = {};
-			
-					a.videoid = 'Xitg5oyemxQ';
-			
-					a.width = '300';
-			
-					a.height = '200';
-			
-					a.duration = '6:26';
-			
-					a.HTMLid = 'video-embed';
-			
-					a.path = 'swf/flashcontrols.swf';
-			
-					var flashvars = {HTMLid:a.HTMLid, videoid:a.videoid, height:a.height, width:a.width, duration:a.duration};
-			
-					var params = {allowFullScreen: 'true'};
-			
-					swfobject.embedSWF(a.path, a.HTMLid, a.width, a.height, '9', null, flashvars, params, null);
-			
-				})();
-		    },      // OPTIONAL
-		                                // If supplied, a one-time setup function 
-		                                // triggered when the handler is first registered.                           
-		
-		    deferSetup : false,          // OPTIONAL, defaults to false
-		                                // If set to true, defers execution the setup function until
-		                                // the media query is first matched. Setup is still triggered just once.
-		
-		    destroy : function() {}     //OPTIONAL
-		                                // If supplied, triggered when a hander is unregistered (covered later). 
-		                                // Enables you to provide lifecycle to responsive widgets. 
-		                                // Put cleanup logic here.
-		
-		}, true).listen();
-     </script>
-     <script>
-        // Can also be used with $(document).ready()
-        $(window).load(function() {
-          $('.flexslider').flexslider({
-            animation: "slide",
-            prevText: "Previous slide",          
-            nextText: "Next slide",
-            keyboard: false,
-            pausePlay: true,
-            pauseText: 'Pause slideshow',
-            playText: 'Play slideshow'
-          });
-        });
-     </script>
-	
-</head>
+	  <!-- GA tracking -->
+	  <script type="text/javascript">
 
-<body>
-    <header role="banner" class="site-header">
-        <div class="access">
-            <div class="container">
-                <div class="text-resizer">
-                    <p>Change text size</p>
-                    <ul>
-                    	<li><a href="#" class="resize-normal">A</a></li>
-                    	<li><a href="#" class="resize-plus-one">A</a></li>
-                    	<li><a href="#" class="resize-plus-two">A</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <nav class="secondary-nav" role="navigation">
-                <ul>
-                    <li><a href="##"><abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr> helpline</a></li>
-                	<li><a href="##">Contact us</a></li>
-                	<li><a href="##">Help</a></li>
-                	                	
-                </ul>
-            </nav>
-            <div class="brand">
-                <h1>
-                    <a href="#">
-                        <abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr>
-                    </a>
-                </h1>
-               
-            </div>
-            
-        </div>
-    </header>
-    <article role="main">
-    
-    <section class="introduction">
-      <div class="container">
-        <div class="title">
-        	<h1><span>Save your sight</span> Spot the signs</h1>
-        	<p>Age-related macular degeneration and other degenerative eye conditions can destroy your sight in just three months. And if you’re over 50 you’re most at risk. But we can help</p>
-        </div>
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-39107581-1']);
+	  _gaq.push(['_trackPageview']);
 
-      <div class="download-pack">
-        <h2>Download the information pack</h2>
-       
-        <a href="#" class="button">
-        	<span class="alpha">Download the fact sheet</span>
-	       <span class="beta">.pdf file</span>
-        </a>
-  
-      </div>
-      </div>
-    </section>
-    
-    <section class="symptoms">
-      <div class="container">
-        <h2>The signs and symptoms of AMD</h2>
-        <p>Symptoms vary, but usually the first problems people notice are with their ability to see detail. You may experience some or all of the following</p>
-    
-        <div class="symptoms-breakdown">
-        
-          <figure class="unit">
-            <img src="http://placekitten.com/400/240">
-            <figcaption>
-              <h3>Blurred vision</h3>
-              <p>Objects appear out of focus, even with your glasses. The centre of your vision is most affected </p>
-            </figcaption>
-          </figure>
-          
-          <figure class="unit">
-            <img src="http://placekitten.com/400/240">
-            <figcaption>
-              <h3>Distorted vision</h3>
-               <p>Lines that should be straight look wavy or distorted</p>
-            </figcaption>
-          </figure>
-          
-          <figure class="unit last">
-            <img src="http://placekitten.com/400/240">
-            <figcaption>
-              <h3>Unclear vision</h3>
-               <p>You vision can appear unclear or darker than normal, especially in the centre</p>
-            </figcaption>
-          </figure>
-        </div>
-       
-        <p class="message">If you spot any of these symptoms or have any concerns about your eyesight contact your GP. </p>
-        </div>
-    </section>
+	  (function() {
+	  	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	  	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	  	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	  
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-39107581-1']);
+	  _gaq.push(['_setAllowLinker', true]);
+	  _gaq.push(['_setDomainName', 'rnibspotthesigns.org.uk']);
+	  _gaq.push(['_trackPageview']);
 
-    
-    
+	  </script>
+	</head>
 
-        
-    <section class="about-rnib">
-      <div class="container">
-            	<h2>About the <abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr></h2>
+	<body>
+		<!-- Tag for Activity Group: RNIB, Activity Name: RNIB Landing Page, Activity ID: 1210207 -->
+		<!-- Expected URL: http://www.rnib.org.uk/ -->
 
-      	        <div class="about-content">
-          <div class="flexslider">
-          <ul class="slides">
-            <li>
-              <img src="img/slide1.jpg" alt="" />
-            </li>
-            <li>
-              <img src="img/slide2.jpg" alt="" />
-            </li>
-            <li>
-              <img src="img/slide1.jpg" alt="" />
-            </li>
-            <li>
-              <img src="img/slide2.jpg" alt="" />
-            </li>
-          </ul>
-        </div>
-			<p>Royal National Institute of Blind People (RNIB) is the leading charity offering information, support and advice to almost two million people with sight loss.</p>
-			<p>If you or a loved one has a sight problem, we can help. We have practical ways to help you live with sight loss. We've got advice to help you travel, shop and manage your money and finances independently. We've also got advice on technology for blind and partially sighted people.</p>
-    	</div>
-<div class="newsletter-form-wrap">
-	  	<form id="form1" name="form1" class="wufoo topLabel newsletter-form" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
-	action="https://martinisatorchbox.wufoo.com/forms/z7x3p3/#public">
-	        <h3>Sign up for our newsletter</h3>
-	        <p>Eye health tips and news from the RNIB delivered quarterly to your inbox </p>
-	        <ul>
-			        
-			        <li id="foli5" class="notranslate      ">
-			<label class="desc" id="title5" for="Field5">
-			First name
-			<span id="req_5" class="req">*</span>
-			</label>
-			<div>
-			<input id="Field5" name="Field5" type="text" class="field text medium" value="" maxlength="255" onkeyup="" required />
+  <!--
+  Activity ID: 1210207
+  Activity Name: RNIB Landing Page
+  Activity Group Name: RNIB
+-->
+
+  <!--
+  Start of DoubleClick Floodlight Tag: Please do not remove
+  Activity name of this tag: RNIB Landing Page.
+  URL of the webpage where the tag is expected to be placed: http://www.rnib.org.uk/
+  This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+  Creation Date: 02/01/2013
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="http://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=rnibl796;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+	<iframe src="http://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=rnibl796;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+<header role="banner" class="site-header">
+	<div class="access">
+		<div class="container">
+			<div class="skip-links">
+				<a href="#main-content">Skip to main content</a>
 			</div>
-			</li><li id="foli6" class="notranslate      ">
-			<label class="desc" id="title6" for="Field6">
-			Last name
-			<span id="req_6" class="req">*</span>
-			</label>
-			<div>
-			<input id="Field6" name="Field6" type="text" class="field text medium" value="" maxlength="255" onkeyup="" required />
+			<div class="text-resizer">
+				<p>Change text size</p>
+				<ul>
+					<li><a href="#" class="resize-normal" title="Small text"><img src="img/small-size.png" alt="Small text" /></a></li>
+					<li><a href="#" class="resize-plus-one" title="Medium text"><img src="img/medium-size.png" alt="Medium text" /></a></li>
+					<li><a href="#" class="resize-plus-two" title="Large text"><img src="img/large-size.png" alt="Large text" /></a></li>
+				</ul>
 			</div>
-			</li><li id="foli3" class="notranslate      ">
-			<label class="desc" id="title3" for="Field3">
-			Email address
-			<span id="req_3" class="req">*</span>
-			</label>
-			<div>
-			<input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" required /> 
+		</div>
+	</div>
+	<div class="container">
+		<nav class="secondary-nav" role="navigation">
+			<ul>
+				<li><a href="http://www.rnib.org.uk/aboutus/contactdetails/Pages/helpline.aspx?utm_source=spotthesigns&amp;utm_medium=website&amp;utm_campaign=helpline"><abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr> Helpline</a></li>
+				<li><a href="http://www.rnib.org.uk/aboutus/contactdetails/Pages/contactdetails.aspx?utm_source=spotthesigns&amp;utm_medium=website&amp;utm_campaign=contact">Contact us</a></li>
+				<li><a href="http://www.rnib.org.uk/aboutus/aboutthiswebsite/help/Pages/help.aspx?utm_source=spotthesigns&amp;utm_medium=website&amp;utm_campaign=help">Help</a></li>
+
+			</ul>
+		</nav>
+		<div class="brand">
+			<a href="http://www.rnib.org.uk/?utm_source=spotthesigns&amp;utm_medium=website&amp;utm_campaign=rnibwebsitehome" target="_blank">
+				<abbr title="Royal National Institute of Blind People" lang="en"><img src="img/RNIBLogo.png" alt="RNIB Home (new window)" /></abbr>
+			</a> 
+		</div>
+
+	</div>
+</header>
+<article role="main">
+	<div id="form-message">
+		<div class="container">
+			<a id="form-message-close" href="#">Close</a>
+			<h2>Thank you for your details.</br>Please download our guide.</h2>
+			<a href="http://rnib.in/spot-the-signs-PDF" rel="nofollow" class="button">Spot-the-signs-PDF (3mb)</a>
+		</div>
+	</div>
+	<section class="introduction">
+		<div class="container">
+			<div class="title">
+				<h1><span>Save your sight</span> Spot the signs</h1>
+				<p>Age-related macular degeneration (AMD) can damage your sight in just three months. If you're over 50, you're most at risk. RNIB can help you spot the signs of AMD and other eye diseases.</p>
 			</div>
+
+			<div class="download-pack">
+				<div class="call-to-action">
+					<h2>Text SPOT to 70123 or call 0203 435 5738 to receive your free guide.</h2>
+					<p class="pdf-alternative">Alternatively fill out the form below for a copy.</p>
+				</div>
+				<p>* Texts (which cost one message) and calls will be charged at your standard network rate. We will contact you again in future to arrange delivery of the booklet and tell you more about our work.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="main-content" class="symptoms">
+		<div class="container">
+			<h2>Signs and symptoms of AMD</h2>
+			<p>Symptoms vary, but usually the first problem you'll notice is your ability to see detail. You may experience some or all of the following:</p>
+
+			<div class="symptoms-breakdown">
+
+				<figure class="unit">
+					<img longdesc="An image of a young girl with blur over the centre of the picture" src="img/symptom-blurred.jpg">
+					<figcaption>
+						<h3>Blurred vision</h3>
+						<p>Your peripheral vision is not affected and you won't feel any pain, but the centre of your vision is increasingly blurry.</p>
+					</figcaption>
+				</figure>
+
+				<figure class="unit">
+					<img longdesc="Window blinds with a wrap perspective in the centre of the picture" src="img/symptom-wavy.jpg">
+					<figcaption>
+						<h3>Distorted vision</h3>
+						<p>Straight lines appear to be wavy, curved or distorted. 'The centre of your vision is affected the most.</p>
+					</figcaption>
+				</figure>
+
+				<figure class="unit last">
+					<img longdesc="Words on a page with a black ink like spot covering the centre of the picture" src="img/symptom-vision.jpg">
+					<figcaption>
+						<h3>Unclear vision</h3>
+						<p>Small print becomes difficult to read even when wearing reading glasses.</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<p class="message">If you have any of these symptoms, visit your nearest optometrist.</p>
+			<p class="message">If you notice a sudden change in your vision, visit your nearest A&amp;E.</p>
+		</div>
+	</section>
+
+	<section class="about-rnib">
+		<div class="container">
+			<h2>About <abbr title="Royal National Institute of Blind People" lang="en">RNIB</abbr></h2>
+			<div class="about-content">
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<img src="img/1.jpg" longdesc="Over 50 per cent of sight loss can be avoided. RNIB can help you spot the signs that could save your sight." />
+						</li>
+						<li>
+							<img src="img/2.jpg" longdesc="&#34;RNIB's Helpline answers hundreds of calls every week from people
+							worried about sight loss. Whatever your situation, we're here to help.&#34; - Mark Evans, RNIB Helpline officer" />
+						</li>
+						<li>
+							<img src="img/3.jpg" longdesc="Last year donations to RNIB helped 17,600 people get vital one-to-one
+							support at eye clinics." />
+						</li>
+						<li>
+							<img src="img/4.jpg" longdesc="Thanks to RNIB's campaigners, a sight-saving treatment for some types of
+							AMD is available from the NHS." />
+						</li>
+						<li>
+							<img src="img/5.jpg" longdesc="We are the Royal National Institute of Blind People (RNIB). We're here
+							for everyone affected by sight loss - that's almost 2 million people in
+							the UK." />
+						</li>
+					</ul>
+				</div>
+				<p>Every day 100 people in the UK start to lose their sight. For some people, it's a gradual process. For others, it happens overnight. For all, it is life changing. At RNIB we're there for you, every step of the way.</p>
+				<p>
+					We help people who have lost their sight continue to do the everyday things they love. We help people see themselves and their future in a more positive light. We campaign and work in partnerships to create a fairer, more inclusive society.
+				</p>
+				<p>
+					None of this would be possible without generous donations from the public. Help us reach everyone who needs us, every step of the way. <a href="https://donate.rnib.org.uk/directdebit/spotthesigns/?promo=CGOLA1411R"
+					onclick="_gaq.push(['_link', 'https://donate.rnib.org.uk/directdebit/spotthesigns/?promo=CGOLA1411R']); return false;" target="_blank">Donate now (new window)</a>. 
+				</p>
+			</div>
+			<div class="newsletter-form-wrap">
+
+				<form id="sign-up-form" name="form3" class="wufoo topLabel page newsletter-form" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+				action="https://rnib.wufoo.eu/forms/qyusqba1svx497/#public">
+				<h3>Text SPOT to 70123 </br> or call 0203 435 5738 to receive your free guide.</h3>
+				<p>Alternatively fill out the form below for a copy.</p>
+				<p>Fields marked with an asterisk (*) are mandatory.</p>
+				<ul>
+					<li id="foli1" class="notranslate      ">
+						<label class="desc" id="title1" for="Field1">
+							First name
+							<span id="req_1" class="req">*</span>
+						</label>
+						<div>
+							<input id="Field1" name="Field1" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required />
+						</div>
+					</li><li id="foli2" class="notranslate      ">
+					<label class="desc" id="title2" for="Field2">
+						Last name
+						<span id="req_2" class="req">*</span>
+					</label>
+					<div>
+						<input id="Field2" name="Field2" type="text" class="field text medium" value="" maxlength="255" tabindex="2" onkeyup="" required />
+					</div>
+				</li><li id="foli4" class="notranslate      ">
+				<label class="desc" id="title4" for="Field4">
+					Email address
+					<span id="req_4" class="req">*</span>
+				</label>
+				<div>
+					<input id="Field4" name="Field4" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" required /> 
+				</div>
 			</li>
-			<li id="foli8" class="notranslate      ">
+			<li id="foli108" class="notranslate      ">
+				<label class="desc" id="title108" for="Field108">
+					Phone number
+				</label>
+				<div>
+					<input id="Field108" class="field text medium" name="Field108" tabindex="4" type="tel" maxlength="255" value="" /> 
+				</div>
+			</li><li id="foli7" class="notranslate      ">
 			<fieldset>
-			<![if !IE | (gte IE 8)]>
-			<legend id="title8" class="desc">
-			Email format
-			<span id="req_8" class="req">*</span>
-			</legend>
-			<![endif]>
-			<!--[if lt IE 8]>
-			<label id="title8" class="desc">
-			Email format
-			<span id="req_8" class="req">*</span>
-			</label>
-			<![endif]-->
-			<div>
-			<span>
-			<input id="Field8" name="Field8" type="checkbox" class="field checkbox" value="Send me emails in plain text"/>
-			<label class="choice" for="Field8">Send me emails in plain text</label>
-			</span>
-			</div>
-			</fieldset>
-			</li>
-			
-			 <li class="buttons ">
-			<div>
-			
-			     <input id="saveForm" name="saveForm" class="button submit" 
-			    type="submit" value="Sign up"
-			 /></div>
-			</li>
-			
-			<li class="hide">
+				<![if !IE | (gte IE 8)]>
+				<legend id="title7" class="desc">
+				</legend>
+				<![endif]>
+		  <!--[if lt IE 8]>
+		  <label id="title7" class="desc">
+		  </label>
+		  <![endif]-->
+		  <div>
+		  	<span>
+		  		<input id="Field7" name="Field7" type="checkbox" class="field checkbox" value=" I want to receive emails with eye health advice and other updates from RNIB." tabindex="5" />
+		  		<label class="choice" for="Field7"> I want to receive emails with eye health advice and other updates from RNIB.</label>
+		  	</span>
+		  </div>
+		</fieldset>
+	</li>
+
+	<li class="buttons ">
+		<div>
+
+			<input id="saveForm" name="saveForm" class="btTxt submit button" 
+			type="submit" value="Submit"
+			/></div>
+		</li>
+
+		<li class="hide">
 			<label for="comment">Do Not Fill This Out</label>
 			<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-			<input type="hidden" id="idstamp" name="idstamp" value="Dhf/5WjDpvHLi20i+ojpaK6+WgtnPbvYJR0ORVmmjdI=" />
-			</li>
-			
-        </ul>
-        </form>
-      	</div>
+			<input type="hidden" id="idstamp" name="idstamp" value="XmGUE2WZsCptZdIZMvxQ9KX8wqwWMwKeIAeuh+TglDM=" />
+		</li>
+	</ul>
+</form> 
+</div>
 
-      </div>
-    </section>
-    
-    <section class="multimedia">
-    	<div class="container">
-      	<div class="video-embed">
-      		<h2>Spot the signs advert</h2>
-      		 <p><a href="#" class="transcript">Download a transcript of the cinema advert</a> <a href="#" class="radio">Listen to the radio advert</a></p>
-      		<div class="embed">
-      		 
-  	    		<div id="video-embed">
-  	    		</div>
-      		</div>
-      	</div>
-    	</div>
-    </section>
-    
-   
-    
-    <section class="download-app">
-    	<div class="container">
-    		<div class="app-content">
-    			<h2>Download the app</h2>
-    			<p>See how the different stages of AMD affect your sight with our app. Available free for the iPhone and iPad on the <a href="#">App Store</a></p>
-    		</div>
-    		<div class="app-badge">
-    			<a href="#">
-	    			Available on the App Store
-    			</a>
-    		</div>
-    	</div>
-    </section>
-     <section class="what-next">
-      <div class="container">
-        <h2><span>Save your sight</span> spot the signs</h2>
-        <p>AMD isn't the only condition that can affect your sight, eye health is important. Something, something do this stuff, read about <a href="#">eye health</a> on our website</p>
-        <p><a href="#" class="download-again">Download the fact sheet</a></p>
-   
-      </div>
-    </section>
-    
-    </article>
-    
-    <footer role="contentinfo" class="site-footer">
-        <div class="container">
-            <p>
-                    <a href="http://www.rnib.org.uk/aboutus/aboutthiswebsite/legal/Pages/copyright.aspx">Copyright</a>
-                
-                    &copy; 2013 Royal National Institute of Blind People
-                </p>
-            <ul class="contact-info" xmlns:rs="urn:schemas-microsoft-com:rowset">
-                
-                <li>
-                    <a href="http://www.rnib.org.uk/aboutus/aboutthiswebsite/legal/Pages/legal.aspx">Terms and conditions</a>
-                </li>
-                <li>
-                    <a href="http://www.rnib.org.uk/aboutus/aboutthiswebsite/privacy">Privacy</a>
-                </li>
-                <li>
-                    <a href="http://www.rnib.org.uk/getinvolved/fundraising/fundraisingpromise/Pages/fundraising_promise.aspx">Fundraising promise</a>
-                </li>
-                <li>
-                    <a href="http://twitter.com/rnib">Twitter</a>
-                </li>
-                <li>
-                    <a href="http://www.facebook.com/rnibuk">Facebook</a>
-                </li>
-                <li>
-                    <a href="http://www.youtube.com/rnibuk">YouTube</a>
-                </li>
-                <li>
-                    <a href="http://www.rnib.org.uk/aboutus/contactdetails/Pages/contactdetails.aspx">Contact us</a>
-                </li>
-            </ul>
-         <p>
-           Registered Charity Number 226227, 105 Judd Street, London WC1H 9NE
-         </p>
-    
-        
-        </div>
-    
-    </footer>
-    </body>
+</div>
+</section>
+
+<section class="multimedia">
+	<div class="container">
+		<div class="video-embed">
+			<h2>Spot the signs advert</h2>
+			<p><a href="http://rnib.in/spot-the-signs-word" target="_blank" class="transcript">Television advert transcript (Word, 167kb) (new window)</a> </p>
+			<div class="embed">
+				<div id="video-embed">
+					<a href="http://www.youtube.com/watch?v=4owg8nVpLyE">Spot the signs cinema advert</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<section class="what-next">
+		<div class="container">
+			<div class="blurb">
+				<h2><span>Save your sight</span> Spot the signs</h2>
+				<p>AMD isn't the only eye condition that can affect your sight, particularly if you are aged 50 or over. Our eye health pack will help you spot the signs and understand what treatments are available. There is also information about <a href="http://www.rnib.org.uk/eyehealth/Pages/eye_health.aspx?utm_source=spotth
+					esigns&amp;utm_medium=website&amp;utm_campaign=eyehealth" target="_blank">eye health (new window)</a> and <a href="http://www.rnib.org.uk/livingwithsightloss/copingwithsightloss/emotionalsupport/Pages/emotional_support_counselling.aspx?utm_source=spotthesigns&amp;utm_medium=website&amp;utm_campaign=emotionalsupport" target="_blank">emotional support (new window)</a> on RNIB's website, or you can call us on 0303 123 9999.</p>
+				</div>
+
+				<div class="download-pack">
+					<div class="call-to-action">
+						<h2>Text SPOT to 70123 or call 0203 435 5738 to receive your free guide.</h2>
+						<p class="pdf-alternative">Alternatively fill out the form above for a copy.</p>
+					</div>
+					<p>* Texts (which cost one message) and calls will be charged at your standard network rate. We will contact you again in future to arrange delivery of the booklet and tell you more about our work.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+</article>
+
+<footer role="contentinfo" class="site-footer">
+	<div class="container">
+		<p>
+			<a href="http://www.rnib.org.uk/aboutus/aboutthiswebsite/legal/Pages/copyright.aspx">Copyright</a>
+
+			&copy; 2014 Royal National Institute of Blind People
+		</p>
+		<ul class="contact-info">
+
+			<li>
+				<a href="terms.html">Terms and conditions</a>
+			</li>
+			<li>
+				<a href="http://www.rnib.org.uk/aboutus/aboutthiswebsite/privacy">Privacy</a>
+			</li>
+			<li>
+				<a href="http://www.rnib.org.uk/getinvolved/fundraising/fundraisingpromise/Pages/fundraising_promise.aspx">Fundraising promise</a>
+			</li>
+			<li>
+				<a href="http://twitter.com/rnib">Twitter</a>
+			</li>
+			<li>
+				<a href="http://www.facebook.com/rnibuk">Facebook</a>
+			</li>
+			<li>
+				<a href="http://www.youtube.com/rnibuk">YouTube</a>
+			</li>
+			<li>
+				<a href="http://www.rnib.org.uk/aboutus/contactdetails/Pages/contactdetails.aspx">Contact us</a>
+			</li>
+		</ul>
+		<p>
+			Registered Charity Number 226227, 105 Judd Street, London WC1H 9NE
+		</p>
+
+
+	</div>
+
+</footer>
+</body>
 </html>

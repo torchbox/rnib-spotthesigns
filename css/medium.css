@@ -38,6 +38,12 @@
 body {
   line-height: 1.6em;
 }
+
+.site-header .brand img {
+  width: 100%;
+  height: auto;
+}
+
 .page-content,
 .navigation {
   margin: 0 auto;
@@ -52,6 +58,17 @@ body {
 .site-header {
   padding-bottom: 1em;
 }
+
+#form-message .container {
+  width: 65%;
+  padding: 3%;
+}
+
+.flex-control-paging li a {
+  margin: 0;
+  padding: 0;
+}
+
 .introduction {
   background: #ffffff url(../img/flare.png) 150px 70% no-repeat;
   background-size: 700px;
@@ -66,17 +83,16 @@ body {
 .title h1 {
   font-size: 3.5em;
 }
+
+.download-pack {
+  max-width: 33%;
+}
+
 .introduction .download-pack {
   width: 33%;
   float: right;
-  margin-top: 9em;
+  margin-top: 1em;
   margin-bottom: 0;
-}
-.introduction .download-pack .button {
-  float: right;
-}
-.introduction .download-pack p {
-  float: right;
 }
 /*
  Symptoms
@@ -167,4 +183,8 @@ body {
 .download-app,
 .what-next {
   padding: 2em 0;
+}
+
+.what-next .blurb {
+  max-width: 60%;
 }
