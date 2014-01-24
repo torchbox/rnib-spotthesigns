@@ -1,3 +1,4 @@
+
 # RNIB 'Spot the signs' website
 
 ## Requirements	
@@ -8,4 +9,5 @@ enquire.js - JS in media queries, used to resize the video
 modernizer.js - Used to detect SVG capability
 
 ## Other
-Vision Australia YouTube player (swfobject.js, flashcontrols.swf)
+Vision Australia YouTube player (swfobject.js, flashcontrols.swf) ( NO LONGER IN USE )
+Nomensa accessibility player is now in use

@@ -33,7 +33,8 @@ $(function() {
     */
     var axel = Math.random() + "";
     var a = axel * 10000000000000;
-    document.write('<iframe src="https://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=rnibc051;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    
+    $('body').append('<iframe src="https://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=rnibc051;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
   }  
 
   //Newsletter thank you message control
@@ -64,7 +65,7 @@ $(function() {
     */
     var axel = Math.random() + "";
     var a = axel * 10000000000000;
-    document.write('<iframe src="http://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=facts860;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    $('body').append('<iframe src="http://3395873.fls.doubleclick.net/activityi;src=3395873;type=rnibo778;cat=facts860;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
   }
 
   // PDF download tracking trigger click event
@@ -132,7 +133,7 @@ $(function() {
           $holder.player({
             id: 'yt',
             useHtml5 : true,
-            media: 'hRO-53fGEFQ',
+            media: '4owg8nVpLyE',
             logoURL : 'http://rnib.org.uk'
           });
       });
@@ -145,8 +146,8 @@ $(function() {
       */
 
       // Store the mobile replacement video
-      var standardYouTubeMarkup = '<iframe id="main-youtube" class="youtube" width="300" height="169" src="http://www.youtube.com/embed/hRO-53fGEFQ?rel=0" frameborder="0" allowfullscreen></iframe>';
-      var accessbileMarkup = '<a href="http://www.youtube.com/watch?v=hRO-53fGEFQ">RNIB Bus video</a>';
+      var standardYouTubeMarkup = '<iframe id="main-youtube" class="youtube" width="300" height="169" src="http://www.youtube.com/embed/4owg8nVpLyE?rel=0" frameborder="0" allowfullscreen></iframe>';
+      var accessbileMarkup = '<a href="http://www.youtube.com/watch?v=4owg8nVpLyE">RNIB advert on Youtube</a>';
       enquire.register("screen and (min-width:850px)", {
 
         match : function() {
@@ -175,7 +176,7 @@ $(function() {
                   $holder.player({
                     id: 'yt',
                     useHtml5 : true,
-                    media: 'hRO-53fGEFQ',
+                    media: '4owg8nVpLyE',
                     logoURL : 'http://rnib.org.uk'
                   });
               });

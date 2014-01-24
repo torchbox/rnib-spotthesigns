@@ -522,6 +522,9 @@ h4 {
   margin-bottom: 0.5em;
   line-height: 1.2em;
 }
+abbr[title] {
+  border: none;
+}
 img {
   max-width: 100%;
 }
@@ -643,6 +646,11 @@ a.button:hover,
   zoom: 1;
   *display: inline;
 }
+
+.access .text-resizer ul li a img {
+  height: 27px;
+}
+
 .access .text-resizer ul:after {
   clear: both;
 }
@@ -826,38 +834,47 @@ a.button:hover,
   width: 50%;
   line-height: 1.8em;
 }
+
+
+
+.download-pack .call-to-action{
+  border: 6px solid #008193;
+  padding: 0.75em;
+  margin-bottom: 1em;
+}
+
 .download-pack h2 {
-  font-size: 1em;
-  line-height: 1em;
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;s
 }
+
 .download-pack p {
-  font-size: .75em;
+  font-size: .875em;
   line-height: 1.4em;
+  margin-bottom: 0;
 }
-.download-pack .button,
-.what-next .button {
+
+#form-message .button
+ {
   -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
   margin-bottom: .5em;
-  background: #d93f02 url(../img/dl-icon.png) 90% 50% no-repeat;
+    background: #d93f02 url(../img/dl-icon.png) 97% 50% no-repeat;
   -webkit-background-size: 60px 60px;
   -moz-background-size: 60px 60px;
   -o-background-size: 60px 60px;
   background-size: 60px 60px;
+  padding: 1.25em 5em 1.25em 1.25em;
 }
 
 .what-next .button {
   background: url(../img/download-again.png) 10px 12px no-repeat #d93f02;
   padding-left: 2.5em;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  -o-background-size: 24px 24px;
+  background-size: 24px 24px;
 }
 
 .download-pack .button span,
@@ -1061,7 +1078,8 @@ about section
   color: #555555;
 }
 .about-rnib input[type="email"],
-.about-rnib input[type="text"] {
+.about-rnib input[type="text"],
+.about-rnib input[type="tel"] {
   border: 1px solid #2b6874;
   padding: 2%;
   width: 96%;
@@ -1231,9 +1249,19 @@ form label.error {
 .what-next {
   padding: 1em 0;
 }
+
+.what-next .blurb {
+  float: left;
+}
+
+.what-next .download-pack {
+  float: right;
+}
+
 .what-next span {
   color: #555555;
 }
+
 .what-next p {
   max-width: 36.666666667em;
   /* Max comfortable reading width at 18px*/
@@ -1268,11 +1296,11 @@ form label.error {
   background-color: transparent;
   padding-left: 1.8em;
   display: inline-block;
+  */
   -webkit-background-size: 24px 24px;
   -moz-background-size: 24px 24px;
   -o-background-size: 24px 24px;
   background-size: 24px 24px;
-  */
   background-position: 10px center;
   background-repeat: no-repeat;
   background-color: #d93f02;
@@ -1306,6 +1334,25 @@ form label.error {
   outline: none;
   text-decoration: underline;
 }
+
+/*Terms and conditions page*/
+
+body.terms article {
+  padding: 2em;
+}
+
+body.terms article .container{
+  max-width: 36em;
+}
+
+body.terms h1 {
+ font-size: 2.5em; 
+}
+
+body.terms section {
+  padding-bottom: 1em;
+}
+
 /*
  * jQuery FlexSlider v2.0
  * http://www.woothemes.com/flexslider/
@@ -1331,7 +1378,8 @@ form label.error {
   list-style: none;
 }
 /* FlexSlider Necessary Styles
-*********************************/.flexslider {
+*********************************/
+.flexslider {
   margin: 0;
   padding: 0;
 }
@@ -1401,7 +1449,7 @@ html[xmlns] .slides {
   margin: -20px 0 0;
   display: block;
   font-size: 0.9em;
-  /*background: url(../img/slides-nav.png) no-repeat 0 0 #d3dddc;*/
+  /*background: url(../img/slides-nav.png) no-repeat 0 0 #d3dddc; */
   background: #2b6874;
   border: 1px solid #2b6874;
   -webkit-border-radius: 20px;
@@ -1422,12 +1470,12 @@ html[xmlns] .slides {
   cursor: pointer;
   color: #fff;
   line-height: 1.7em;
-  /*text-indent: -9999px; No accessible in IE8 accessibility mode*/
+  /*text-indent: -9999px; Not accessible in IE8 accessibility mode*/
 }
 
 .flex-direction-nav a:hover,
 .flex-direction-nav a:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .flex-direction-nav a:focus {
@@ -1511,11 +1559,13 @@ html[xmlns] .slides {
   background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   text-indent: -9999px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  padding: 3px; 
+  margin: 0 0.3em;
 }
 .flex-control-paging li a:hover {
   background: #333;
@@ -1549,6 +1599,50 @@ html[xmlns] .slides {
   opacity: 1;
   cursor: default;
 }
+
+.download-pack .alpha {
+  display: block;
+  width: 310px;
+  border: 4px solid #008193;
+}
+
+.download-pack a.pdf-other-lang,
+a.pdf-other-lang {
+  display: block;
+  width: 310px;
+}
+
+.what-next a.pdf-other-lang{
+  width: 266px;
+}
+
+.download-pack a.pdf-other-lang {
+  float: right;
+}
+
+a.pdf-other-lang {
+  color: #333;
+  font-size: 0.75em;
+  line-height: 1.3em;
+  text-align: right;
+  text-decoration: none;
+}
+
+a.pdf-other-lang:hover span {
+  color: #d93f02;
+}
+
+a.pdf-other-lang span.alpha {
+  text-decoration: underline;
+}
+
+a.pdf-other-lang span.beta {
+  text-decoration: none;
+  font-style: italic;
+  display: block;
+}
+
+
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev {
     opacity: 1;
