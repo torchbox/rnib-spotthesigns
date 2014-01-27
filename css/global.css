@@ -1473,6 +1473,18 @@ html[xmlns] .slides {
   /*text-indent: -9999px; Not accessible in IE8 accessibility mode*/
 }
 
+.largest .flex-direction-nav a,
+.large .flex-direction-nav a {
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.largest .flex-direction-nav a.flex-next,
+.large .flex-direction-nav a.flex-next {
+  width: 25px;
+}
+
 .flex-direction-nav a:hover,
 .flex-direction-nav a:focus {
   text-decoration: none;
@@ -1488,6 +1500,11 @@ html[xmlns] .slides {
   -moz-transition: all 0.1s; /* Firefox 4 */
   -webkit-transition: all 0.1s; /* Safari and Chrome */
   -o-transition: all 0.1s; /* Opera */
+}
+
+.large .flex-direction-nav a:focus,
+.largest .flex-direction-nav a:focus {
+  width: 200px;
 }
 
 .flex-pauseplay {
