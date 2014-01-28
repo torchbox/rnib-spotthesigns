@@ -113,7 +113,7 @@ $(function() {
     playText: 'Play slideshow'
   });
 
-  if ($("html").hasClass("lt-ie9")) {
+  if ($("html").hasClass("lt-ie10")) {
     $('.embed').append(accessbileMarkup);
     $(document).ready(function(){
       // Find all links to videos on youtube
