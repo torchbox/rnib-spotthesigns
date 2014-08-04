@@ -486,7 +486,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: #008193;
+  color: #D6007F;
   text-rendering: optimizeLegibility;
 }
 h1 {
@@ -555,7 +555,7 @@ figure figcaption {
 }
 a.button,
 .button {
-  background: #008193;
+  background: #D6007F;
   color: #fff;
   padding: 0.5em 1em;
   display: inline-block;
@@ -615,7 +615,7 @@ a.button:hover,
 }
 .access {
   width: 100%;
-  background-color: #008193;
+  background-color: #D6007F;
   margin-bottom: 1em;
 }
 .access .container {
@@ -759,7 +759,7 @@ a.button:hover,
   float: left;
   font-weight: bold;
   font-size: 0.875em;
-  color: #008193;
+  color: #D6007F;
 }
 .secondary-nav ul:before,
 .secondary-nav ul:after {
@@ -785,7 +785,7 @@ a.button:hover,
 .site-footer {
   zoom: 1;
   padding: 0.5em 0 1em 0;
-  background-color: #008193;
+  background-color: #D6007F;
   font-size: 0.875em;
   color: #ffffff;
 }
@@ -838,7 +838,7 @@ a.button:hover,
 
 
 .download-pack .call-to-action{
-  border: 6px solid #008193;
+  border: 6px solid #D6007F;
   padding: 0.75em;
   margin-bottom: 1em;
 }
@@ -1268,7 +1268,7 @@ form label.error {
 
 }
 .what-next .download-again {
-  background: #008193;
+  background: #D6007F;
   color: #fff;
   padding: 0.5em 1em;
   -webkit-border-top-right-radius: 3px;
@@ -1603,7 +1603,7 @@ html[xmlns] .slides {
 .download-pack .alpha {
   display: block;
   width: 310px;
-  border: 4px solid #008193;
+  border: 4px solid #D6007F;
 }
 
 .download-pack a.pdf-other-lang,
