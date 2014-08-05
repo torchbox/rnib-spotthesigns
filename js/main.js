@@ -146,8 +146,8 @@ $(function() {
       */
 
       // Store the mobile replacement video
-      var standardYouTubeMarkup = '<iframe id="main-youtube" class="youtube" width="300" height="169" src="http://www.youtube.com/embed/4owg8nVpLyE?rel=0" frameborder="0" allowfullscreen></iframe>';
-      var accessbileMarkup = '<a href="http://www.youtube.com/watch?v=4owg8nVpLyE">RNIB advert on Youtube</a>';
+      var standardYouTubeMarkup = '<iframe id="main-youtube" class="youtube" width="300" height="169" src="http://www.youtube.com/watch?v=14Dd6yTi5pk" frameborder="0" allowfullscreen></iframe>';
+      var accessbileMarkup = '<a href="http://www.youtube.com/watch?v=14Dd6yTi5pk">RNIB advert on Youtube</a>';
       enquire.register("screen and (min-width:850px)", {
 
         match : function() {
