@@ -113,7 +113,7 @@ $(function() {
     playText: 'Play slideshow'
   });
 
-  if ($("html").hasClass("lt-ie10")) {
+  if ($("html").hasClass("lt-ie9")) {
     $('.embed').append(accessbileMarkup);
     $(document).ready(function(){
       // Find all links to videos on youtube
@@ -133,7 +133,7 @@ $(function() {
           $holder.player({
             id: 'yt',
             useHtml5 : true,
-            media: '4owg8nVpLyE',
+            media: '14Dd6yTi5pk',
             logoURL : 'http://rnib.org.uk'
           });
       });
